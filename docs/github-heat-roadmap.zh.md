@@ -36,22 +36,29 @@
 - 输出 Markdown 或 JSON 诊断报告。
 - 用红/黄/绿状态方便公开分享。
 
-### v0.3.0 — Cross-Client MCP Runtime Notes
+### v0.3.0 — Synthetic Benchmark
+
+- 状态：已交付。
+- 增加 N 个窗口 x M 个 MCP server 的合成 benchmark 命令。
+- 增加 Markdown 和 JSON 输出。
+- 增加可传播的 Before/After SVG 图示。
+
+### v0.4.0 — Cross-Client MCP Runtime Notes
 
 - 说明类似进程放大模式也可能出现在其他 MCP-heavy 客户端。
 - Codex Desktop 仍作为主要测试目标。
 - 对未测试产品只给中性说明，不声称支持。
 
-### v0.4.0 — Agent Runtime Privacy Guard
+### v0.5.0 — Agent Runtime Privacy Guard
 
 - 把隐私检查抽成独立模块。
 - 检测私有机器路径、凭证、本地网关引用、生成会话痕迹。
 - 提供公开仓库发布前的 CI 模板。
 
-### v0.5.0 — Demo Video and Benchmark
+### v0.6.0 — Demo Video
 
 - 增加短视频演示方案。
-- 提供合成 benchmark：N 个窗口 x M 个工具 server 的进程数量对比。
+- 展示合成 benchmark：N 个窗口 x M 个工具 server 的进程归属对比。
 - 保持合成数据和隐私安全。
 
 ## 发布渠道

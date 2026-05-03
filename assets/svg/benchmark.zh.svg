@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">合成 MCP 进程放大 benchmark</title>
+  <desc id="desc">直接 stdio MCP 进程放大与共享本机 HTTP broker 的前后对比。</desc>
+  <rect width="1200" height="680" fill="#f7f9fc"/>
+  <text x="70" y="70" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#0f172a">合成 MCP 进程放大 Benchmark</text>
+  <text x="70" y="108" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#475569">10 个 Codex 窗口 × 每窗口 8 个 MCP server，隐私安全的合成模型</text>
+
+  <rect x="70" y="150" width="500" height="390" rx="12" fill="#ffffff" stroke="#d8dee9"/>
+  <text x="110" y="205" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#991b1b">改造前：直接 stdio</text>
+  <text x="110" y="238" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="17" fill="#475569">每个窗口都可能拥有自己的后端进程树</text>
+  <rect x="110" y="280" width="380" height="42" rx="8" fill="#fee2e2"/>
+  <rect x="110" y="336" width="380" height="42" rx="8" fill="#fecaca"/>
+  <rect x="110" y="392" width="380" height="42" rx="8" fill="#fca5a5"/>
+  <rect x="110" y="448" width="380" height="42" rx="8" fill="#f87171"/>
+  <text x="130" y="307" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#7f1d1d">80 个后端进程单元</text>
+  <text x="130" y="363" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#7f1d1d">80 个进程树</text>
+  <text x="130" y="419" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#7f1d1d">按窗口重复启动</text>
+  <text x="130" y="475" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#7f1d1d">本地 runtime 放大</text>
+
+  <rect x="630" y="150" width="500" height="390" rx="12" fill="#ffffff" stroke="#d8dee9"/>
+  <text x="670" y="205" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#14532d">改造后：共享 broker</text>
+  <text x="670" y="238" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="17" fill="#475569">Codex 窗口连接本机 HTTP 端点</text>
+  <rect x="670" y="280" width="90" height="42" rx="8" fill="#bbf7d0"/>
+  <rect x="670" y="336" width="90" height="42" rx="8" fill="#86efac"/>
+  <rect x="670" y="392" width="150" height="42" rx="8" fill="#4ade80"/>
+  <rect x="670" y="448" width="240" height="42" rx="8" fill="#22c55e"/>
+  <text x="780" y="307" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#14532d">8 个后端进程单元</text>
+  <text x="780" y="363" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#14532d">1 个 broker 进程单元</text>
+  <text x="840" y="419" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#14532d">一个后端池</text>
+  <text x="930" y="475" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#14532d">共 9 个单元</text>
+
+  <rect x="270" y="575" width="660" height="58" rx="12" fill="#0f172a"/>
+  <text x="315" y="612" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">合成减少：71 个进程单元，88.75%</text>
+</svg>

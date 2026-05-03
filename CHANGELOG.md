@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 - 2026-05-04
+
+- Added `codex-shared-mcp-benchmark`, a privacy-safe synthetic fan-out benchmark command.
+- Added Markdown and JSON benchmark output for 10-window by 8-server scenarios.
+- Added benchmark tests and public Before/After SVG diagrams.
+- Added bilingual benchmark documentation and README usage examples.
+
 ## 0.2.0 - 2026-05-04
 
 - Added `codex-shared-mcp-diagnose`, a privacy-safe runtime diagnostic command.

@@ -50,6 +50,7 @@ Codex Shared MCP Broker 是一个面向 Windows 和 Codex Desktop 的开源项�
 - 脱敏后的 MCP 后端注册表示例；
 - PowerShell 预检脚本；
 - Python 仓库审计 CLI；
+- 隐私安全 runtime 诊断和合成 benchmark 命令；
 - GitHub Actions CI；
 - 架构图、运行逻辑图、作用图、产品图；
 - Image2 位图生成提示词和成品图；
@@ -120,6 +121,16 @@ codex-shared-mcp-diagnose --output codex-runtime-report.md
 
 它不会输出私有绝对路径、账号 ID、token 或本地路由细节。
 
+生成合成 fan-out benchmark：
+
+```powershell
+codex-shared-mcp-benchmark --windows 10 --servers 8 --output benchmark.md
+```
+
+默认结果：直接 stdio 是 80 个合成进程单元，共享 broker 是 9 个，合成减少 88.75%。
+
+![合成 benchmark](assets/svg/benchmark.zh.svg)
+
 已配置机器上的预检：
 
 ```powershell
@@ -166,6 +177,7 @@ audit-ok
 补充发布资产：
 
 - [ROADMAP.md](ROADMAP.md)
+- [docs/benchmark.zh.md](docs/benchmark.zh.md)
 - [docs/current-source-check.zh.md](docs/current-source-check.zh.md)
 - [docs/demo-benchmark-plan.zh.md](docs/demo-benchmark-plan.zh.md)
 

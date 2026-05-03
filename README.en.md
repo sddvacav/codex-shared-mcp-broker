@@ -50,6 +50,7 @@ The core pattern is:
 - sanitized MCP backend registry example;
 - PowerShell preflight checks;
 - Python repository audit CLI;
+- privacy-safe runtime diagnostics and synthetic benchmark commands;
 - CI workflow for tests and public artifact audit;
 - SVG diagrams for architecture, workflow, impact, and product overview;
 - Image2 prompts and generated bitmap assets;
@@ -120,6 +121,16 @@ The diagnostic report summarizes:
 
 It does not print private absolute paths, account IDs, tokens, or local routing details.
 
+Generate a synthetic fan-out benchmark:
+
+```powershell
+codex-shared-mcp-benchmark --windows 10 --servers 8 --output benchmark.md
+```
+
+Default result: direct stdio has 80 synthetic process units, shared broker has 9, a synthetic reduction of 88.75%.
+
+![Synthetic benchmark](assets/svg/benchmark.en.svg)
+
 On a configured machine, run:
 
 ```powershell
@@ -166,6 +177,7 @@ The public roadmap is in [docs/github-heat-roadmap.en.md](docs/github-heat-roadm
 Additional launch assets:
 
 - [ROADMAP.md](ROADMAP.md)
+- [docs/benchmark.en.md](docs/benchmark.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
 - [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 

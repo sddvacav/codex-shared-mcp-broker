@@ -36,22 +36,29 @@ The sharper positioning is:
 - Emits Markdown or JSON diagnostic reports.
 - Adds red/yellow/green status for public sharing.
 
-### v0.3.0 — Cross-Client MCP Runtime Notes
+### v0.3.0 — Synthetic Benchmark
+
+- Status: delivered.
+- Added a synthetic benchmark command for N windows x M MCP servers.
+- Added Markdown and JSON output.
+- Added Before/After SVG diagrams for sharing.
+
+### v0.4.0 — Cross-Client MCP Runtime Notes
 
 - Document how the same process fan-out pattern can appear in other MCP-heavy clients.
 - Keep Codex Desktop as the primary tested target.
 - Add neutral examples without claiming support for untested products.
 
-### v0.4.0 — Agent Runtime Privacy Guard
+### v0.5.0 — Agent Runtime Privacy Guard
 
 - Extract reusable privacy checks into a dedicated module.
 - Detect private machine paths, credentials, local gateway references, and generated session traces.
 - Provide CI templates for public repository release safety.
 
-### v0.5.0 — Demo Video and Benchmark
+### v0.6.0 — Demo Video
 
 - Add a short visual demo plan.
-- Provide a synthetic benchmark: N windows x M tool servers before/after process count.
+- Show the synthetic benchmark: N windows x M tool servers before/after process ownership.
 - Keep it synthetic and privacy-safe.
 
 ## Launch Channels

@@ -14,22 +14,30 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 - Produces sanitized Markdown or JSON reports that can be attached to GitHub issues.
 - Keeps private paths, tokens, account state, and gateway routing out of the report.
 
-## v0.3.0 - Cross-Client Runtime Notes
+## v0.3.0 - Synthetic Benchmark
+
+- Status: delivered.
+- Added a synthetic benchmark command for N windows x M MCP servers.
+- Added Markdown and JSON output.
+- Added Before/After SVG diagrams.
+- Kept the benchmark privacy-safe by avoiding live process inspection.
+
+## v0.4.0 - Cross-Client Runtime Notes
 
 - Document how similar MCP process fan-out can appear in other MCP-heavy desktop clients.
 - Keep Codex Desktop as the primary tested target.
 - Avoid claiming support for untested clients.
 
-## v0.4.0 - Agent Runtime Privacy Guard
+## v0.5.0 - Agent Runtime Privacy Guard
 
 - Extract reusable privacy checks into a dedicated module.
 - Detect credentials, private machine paths, local gateway references, generated session traces, and accidental config dumps.
 - Provide CI templates for release-safe public repositories.
 
-## v0.5.0 - Demo and Benchmark
+## v0.6.0 - Demo Video
 
 - Add a short demo plan and reproducible benchmark method.
-- Compare synthetic process counts before and after the shared broker pattern.
+- Compare process ownership patterns before and after the shared broker pattern.
 - Keep all benchmark data synthetic and privacy-safe.
 
 ## Non-Goals

@@ -19,6 +19,12 @@ Runtime diagnostics:
 codex-shared-mcp-diagnose --output codex-runtime-report.md
 ```
 
+Synthetic benchmark:
+
+```powershell
+codex-shared-mcp-benchmark --windows 10 --servers 8 --output benchmark.md
+```
+
 ![Architecture](assets/svg/architecture.en.svg)
 
 ## Quick Start
@@ -35,6 +41,8 @@ See:
 - [中文说明](README.zh.md)
 - [English architecture notes](docs/architecture.en.md)
 - [中文架构说明](docs/architecture.zh.md)
+- [Synthetic benchmark](docs/benchmark.en.md)
+- [合成 Benchmark](docs/benchmark.zh.md)
 - [GitHub landscape](docs/github-landscape.en.md)
 - [GitHub 相关项目对比](docs/github-landscape.zh.md)
 - [Design process](docs/design-process.en.md)
