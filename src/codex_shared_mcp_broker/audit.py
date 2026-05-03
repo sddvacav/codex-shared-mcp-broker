@@ -64,6 +64,19 @@ SECRET_PATTERNS = [
     re.compile(r"(?i)password\s*=\s*['\"][^'\"]{6,}['\"]"),
 ]
 
+PRIVACY_PATTERNS = [
+    re.compile(r"(?i)\bsub2api\b"),
+    re.compile(r"(?i)\.codex_home"),
+    re.compile(r"(?i)\bLAPTOP-[A-Z0-9\-]+"),
+    re.compile(r"(?i)C:\\Users\\[^\\\s]+"),
+    re.compile(r"(?i)D:\\(?!path\\to\\your\\b)[^ \n\r\t\"')]+"),
+]
+
+PRIVACY_ALLOWLIST = {
+    "scripts/check-no-secrets.ps1",
+    "src/codex_shared_mcp_broker/audit.py",
+}
+
 
 @dataclass(frozen=True)
 class Finding:
@@ -132,6 +145,19 @@ def audit_no_secrets(root: Path) -> list[Finding]:
     return findings
 
 
+def audit_no_private_machine_details(root: Path) -> list[Finding]:
+    findings: list[Finding] = []
+    for path in _text_files(root):
+        rel = str(path.relative_to(root)).replace("\\", "/")
+        if rel in PRIVACY_ALLOWLIST:
+            continue
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for pattern in PRIVACY_PATTERNS:
+            if pattern.search(text):
+                findings.append(Finding("error", rel, "possible private machine detail found"))
+    return findings
+
+
 def audit_bilingual_docs(root: Path) -> list[Finding]:
     findings: list[Finding] = []
     pairs = [
@@ -152,6 +178,7 @@ def run_audit(root: Path) -> list[Finding]:
         *audit_required_files(root),
         *audit_examples(root),
         *audit_no_secrets(root),
+        *audit_no_private_machine_details(root),
         *audit_bilingual_docs(root),
     ]
 

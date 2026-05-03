@@ -4,7 +4,12 @@ $patterns = @(
     'sk-[A-Za-z0-9_\-]{20,}',
     'gh[opusr]_[A-Za-z0-9_]{20,}',
     '(?i)(api[_-]?key|auth[_-]?token|bearer[_-]?token)\s*=\s*[''"][^''"]{8,}[''"]',
-    '(?i)password\s*=\s*[''"][^''"]{6,}[''"]'
+    '(?i)password\s*=\s*[''"][^''"]{6,}[''"]',
+    '(?i)\bsub2api\b',
+    '(?i)\.codex_home',
+    '(?i)\bLAPTOP-[A-Z0-9\-]+',
+    '(?i)C:\\Users\\[^\\\s]+',
+    '(?i)D:\\(?!path\\to\\your\\b)[^ \n\r\t"'')]+'
 )
 
 $files = Get-ChildItem -Recurse -File |
@@ -16,6 +21,10 @@ $files = Get-ChildItem -Recurse -File |
 
 $failed = $false
 foreach ($file in $files) {
+    $relative = Resolve-Path -Relative $file.FullName
+    if ($relative -eq ".\src\codex_shared_mcp_broker\audit.py" -or $relative -eq ".\scripts\check-no-secrets.ps1") {
+        continue
+    }
     $text = Get-Content -Raw -Path $file.FullName -ErrorAction SilentlyContinue
     foreach ($pattern in $patterns) {
         if ($text -match $pattern) {
