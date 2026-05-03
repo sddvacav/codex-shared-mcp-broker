@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0 - 2026-05-04
+
+- Added cross-client MCP runtime notes.
+- Added a public stage numbering document so launch copy can use `0.03`, `0.04`, and later stage labels while Python packaging stays semantic.
+- Updated README, roadmap, and repository audit coverage for the new public-stage and cross-client docs.
+
 ## 0.3.0 - 2026-05-04
 
 - Added `codex-shared-mcp-benchmark`, a privacy-safe synthetic fan-out benchmark command.

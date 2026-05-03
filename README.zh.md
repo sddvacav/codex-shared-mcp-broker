@@ -177,7 +177,9 @@ audit-ok
 补充发布资产：
 
 - [ROADMAP.md](ROADMAP.md)
+- [PUBLIC_STAGE.md](PUBLIC_STAGE.md)
 - [docs/benchmark.zh.md](docs/benchmark.zh.md)
+- [docs/cross-client-runtime-notes.zh.md](docs/cross-client-runtime-notes.zh.md)
 - [docs/current-source-check.zh.md](docs/current-source-check.zh.md)
 - [docs/demo-benchmark-plan.zh.md](docs/demo-benchmark-plan.zh.md)
 

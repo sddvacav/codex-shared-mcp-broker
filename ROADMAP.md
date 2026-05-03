@@ -24,9 +24,10 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 
 ## v0.4.0 - Cross-Client Runtime Notes
 
-- Document how similar MCP process fan-out can appear in other MCP-heavy desktop clients.
-- Keep Codex Desktop as the primary tested target.
-- Avoid claiming support for untested clients.
+- Status: delivered.
+- Documented how similar MCP process fan-out can appear in other MCP-heavy desktop clients.
+- Kept Codex Desktop as the primary tested target.
+- Added claim boundaries for untested clients.
 
 ## v0.5.0 - Agent Runtime Privacy Guard
 

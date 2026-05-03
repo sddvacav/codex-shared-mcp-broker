@@ -45,6 +45,7 @@
 
 ### v0.4.0 — Cross-Client MCP Runtime Notes
 
+- 状态：已交付。
 - 说明类似进程放大模式也可能出现在其他 MCP-heavy 客户端。
 - Codex Desktop 仍作为主要测试目标。
 - 对未测试产品只给中性说明，不声称支持。

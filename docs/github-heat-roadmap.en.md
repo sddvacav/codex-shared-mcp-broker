@@ -45,9 +45,10 @@ The sharper positioning is:
 
 ### v0.4.0 — Cross-Client MCP Runtime Notes
 
-- Document how the same process fan-out pattern can appear in other MCP-heavy clients.
-- Keep Codex Desktop as the primary tested target.
-- Add neutral examples without claiming support for untested products.
+- Status: delivered.
+- Documented how the same process fan-out pattern can appear in other MCP-heavy clients.
+- Kept Codex Desktop as the primary tested target.
+- Added neutral examples without claiming support for untested products.
 
 ### v0.5.0 — Agent Runtime Privacy Guard
 

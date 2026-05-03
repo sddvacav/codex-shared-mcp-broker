@@ -177,7 +177,9 @@ The public roadmap is in [docs/github-heat-roadmap.en.md](docs/github-heat-roadm
 Additional launch assets:
 
 - [ROADMAP.md](ROADMAP.md)
+- [PUBLIC_STAGE.md](PUBLIC_STAGE.md)
 - [docs/benchmark.en.md](docs/benchmark.en.md)
+- [docs/cross-client-runtime-notes.en.md](docs/cross-client-runtime-notes.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
 - [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 
