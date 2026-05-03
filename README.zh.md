@@ -1,6 +1,6 @@
 # Codex 共享 MCP Broker
 
-![产品图](assets/svg/product.zh.svg)
+![Image2 封面图](assets/image2/cover.png)
 
 Codex Shared MCP Broker 是一个面向 Windows 和 Codex Desktop 的开源项目，用来复现、说明和验证“多窗口共享 MCP broker”的配置方式。它解决的核心问题是：第一个 Codex 窗口运行很快，但第二、第三、第四个窗口开启后，因为每个窗口都重复拉起一套 MCP stdio 工具进程，导致本机负载迅速放大，最终出现明显卡顿。
 
@@ -36,7 +36,13 @@ Codex Shared MCP Broker 是一个面向 Windows 和 Codex Desktop 的开源项�
 - Python 仓库审计 CLI；
 - GitHub Actions CI；
 - 架构图、运行逻辑图、作用图、产品图；
-- Image2 位图生成提示词。
+- Image2 位图生成提示词和成品图。
+
+## Image2 设计资产
+
+![Image2 产品说明图](assets/image2/product-overview.png)
+
+成品位图已提交在 [assets/image2](assets/image2)。源提示词已提交在 [assets/image2-prompts](assets/image2-prompts)。完整设计流程见：[docs/design-process.zh.md](docs/design-process.zh.md)。
 
 ## 不包含什么
 
@@ -118,4 +124,3 @@ audit-ok
 ## 许可证
 
 MIT。
-

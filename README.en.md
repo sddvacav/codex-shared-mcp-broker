@@ -1,6 +1,6 @@
 # Codex Shared MCP Broker
 
-![Product overview](assets/svg/product.en.svg)
+![Image2 cover](assets/image2/cover.png)
 
 Codex Shared MCP Broker is a reproducible Windows setup for running multiple Codex Desktop windows with shared MCP tooling. It documents the configuration pattern, example broker registry, validation checks, diagrams, and release hygiene needed to avoid local MCP process fan-out.
 
@@ -36,7 +36,13 @@ The core pattern is:
 - Python repository audit CLI;
 - CI workflow for tests and public artifact audit;
 - SVG diagrams for architecture, workflow, impact, and product overview;
-- Image2 prompts for generating polished bitmap assets.
+- Image2 prompts and generated bitmap assets.
+
+## Image2 Design Assets
+
+![Image2 product overview](assets/image2/product-overview.png)
+
+The generated bitmap assets are committed under [assets/image2](assets/image2). The source prompts are committed under [assets/image2-prompts](assets/image2-prompts), and the full design process is documented in [docs/design-process.en.md](docs/design-process.en.md).
 
 ## What This Repository Does Not Include
 
@@ -118,4 +124,3 @@ The differentiating scope here is narrower:
 ## License
 
 MIT.
-

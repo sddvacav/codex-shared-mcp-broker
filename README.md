@@ -3,7 +3,7 @@
 English: [README.en.md](README.en.md)  
 中文：[README.zh.md](README.zh.md)
 
-![Product overview](assets/svg/product.en.svg)
+![Image2 cover](assets/image2/cover.png)
 
 Codex Shared MCP Broker is a Windows-oriented open-source package for documenting, validating, and reproducing a shared MCP setup for Codex Desktop. It targets the specific failure mode where multiple Codex windows each spawn their own heavy MCP stdio process tree, causing the second and third windows to become slow even when the first window is fast.
 
@@ -27,4 +27,5 @@ See:
 - [中文架构说明](docs/architecture.zh.md)
 - [GitHub landscape](docs/github-landscape.en.md)
 - [GitHub 相关项目对比](docs/github-landscape.zh.md)
-
+- [Design process](docs/design-process.en.md)
+- [设计流程](docs/design-process.zh.md)

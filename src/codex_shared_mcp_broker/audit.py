@@ -28,6 +28,8 @@ REQUIRED_FILES = [
     "docs/architecture.zh.md",
     "docs/github-landscape.en.md",
     "docs/github-landscape.zh.md",
+    "docs/design-process.en.md",
+    "docs/design-process.zh.md",
     "examples/codex-config.toml",
     "examples/named_servers.example.json",
     "scripts/preflight.ps1",
@@ -39,6 +41,8 @@ REQUIRED_FILES = [
     "assets/svg/impact.zh.svg",
     "assets/svg/product.en.svg",
     "assets/svg/product.zh.svg",
+    "assets/image2/cover.png",
+    "assets/image2/product-overview.png",
 ]
 
 TEXT_FILE_SUFFIXES = {
@@ -134,6 +138,7 @@ def audit_bilingual_docs(root: Path) -> list[Finding]:
         ("README.en.md", "README.zh.md"),
         ("docs/architecture.en.md", "docs/architecture.zh.md"),
         ("docs/github-landscape.en.md", "docs/github-landscape.zh.md"),
+        ("docs/design-process.en.md", "docs/design-process.zh.md"),
         ("docs/release-checklist.en.md", "docs/release-checklist.zh.md"),
     ]
     for en, zh in pairs:
