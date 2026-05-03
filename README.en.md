@@ -1,8 +1,24 @@
 # Codex Shared MCP Broker
 
+[![CI](https://github.com/sddvacav/codex-shared-mcp-broker/actions/workflows/ci.yml/badge.svg)](https://github.com/sddvacav/codex-shared-mcp-broker/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/sddvacav/codex-shared-mcp-broker)](https://github.com/sddvacav/codex-shared-mcp-broker/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ![Image2 cover](assets/image2/cover.png)
 
-Codex Shared MCP Broker is a reproducible Windows setup for running multiple Codex Desktop windows with shared MCP tooling. It documents the configuration pattern, example broker registry, validation checks, diagrams, and release hygiene needed to avoid local MCP process fan-out.
+Codex Shared MCP Broker is a reproducible Windows setup for running multiple Codex Desktop windows with shared MCP tooling.
+
+**Tagline:** stop local MCP process fan-out before it turns your AI coding workstation into the bottleneck.
+
+It documents the configuration pattern, example broker registry, validation checks, diagrams, and release hygiene needed to avoid local MCP process fan-out.
+
+## Why Star This
+
+- You run multiple Codex Desktop windows and later windows get slower.
+- You use MCP servers and suspect local `npx` / `uvx` / Python subprocess fan-out.
+- You want to keep `xhigh` reasoning instead of downgrading model quality for speed.
+- You need a sanitized, reproducible pattern for sharing MCP tools through local HTTP endpoints.
+- You care about agent runtime privacy and release hygiene.
 
 ## Problem
 
@@ -36,7 +52,8 @@ The core pattern is:
 - Python repository audit CLI;
 - CI workflow for tests and public artifact audit;
 - SVG diagrams for architecture, workflow, impact, and product overview;
-- Image2 prompts and generated bitmap assets.
+- Image2 prompts and generated bitmap assets;
+- GitHub launch roadmap and post drafts.
 
 ## Image2 Design Assets
 
@@ -120,6 +137,21 @@ This project is not the first MCP proxy or gateway. See [docs/github-landscape.e
 The differentiating scope here is narrower:
 
 > Windows + Codex Desktop + multi-window MCP process fan-out + shared local HTTP broker + reproducible validation.
+
+## GitHub Growth Plan
+
+The public roadmap is in [docs/github-heat-roadmap.en.md](docs/github-heat-roadmap.en.md). The short version:
+
+1. Make this repository the flagship case study for Codex Desktop + MCP process fan-out.
+2. Extract reusable runtime privacy checks into a second tool.
+3. Add cross-client examples for other MCP-heavy agent desktops.
+4. Publish the launch post in [docs/launch-post.en.md](docs/launch-post.en.md).
+
+Additional launch assets:
+
+- [ROADMAP.md](ROADMAP.md)
+- [docs/current-source-check.en.md](docs/current-source-check.en.md)
+- [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 
 ## License
 

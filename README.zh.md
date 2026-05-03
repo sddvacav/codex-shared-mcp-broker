@@ -1,8 +1,24 @@
 # Codex 共享 MCP Broker
 
+[![CI](https://github.com/sddvacav/codex-shared-mcp-broker/actions/workflows/ci.yml/badge.svg)](https://github.com/sddvacav/codex-shared-mcp-broker/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/sddvacav/codex-shared-mcp-broker)](https://github.com/sddvacav/codex-shared-mcp-broker/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 ![Image2 封面图](assets/image2/cover.png)
 
-Codex Shared MCP Broker 是一个面向 Windows 和 Codex Desktop 的开源项目，用来复现、说明和验证“多窗口共享 MCP broker”的配置方式。它解决的核心问题是：第一个 Codex 窗口运行很快，但第二、第三、第四个窗口开启后，因为每个窗口都重复拉起一套 MCP stdio 工具进程，导致本机负载迅速放大，最终出现明显卡顿。
+Codex Shared MCP Broker 是一个面向 Windows 和 Codex Desktop 的开源项目，用来复现、说明和验证“多窗口共享 MCP broker”的配置方式。
+
+**一句话定位：** 在本机 MCP 进程放大拖垮 AI 编程工作站之前，把它收束到一个共享 broker。
+
+它解决的核心问题是：第一个 Codex 窗口运行很快，但第二、第三、第四个窗口开启后，因为每个窗口都重复拉起一套 MCP stdio 工具进程，导致本机负载迅速放大，最终出现明显卡顿。
+
+## 为什么值得 Star
+
+- 你同时开多个 Codex Desktop 窗口，后开的窗口越来越慢。
+- 你使用 MCP server，并怀疑本机 `npx` / `uvx` / Python 子进程重复启动。
+- 你希望保留 `xhigh` 推理强度，而不是为了速度降低模型质量。
+- 你需要一个脱敏、可复现的共享 HTTP MCP 配置模式。
+- 你关心 agent runtime 隐私和公开发布安全。
 
 ## 问题
 
@@ -36,7 +52,8 @@ Codex Shared MCP Broker 是一个面向 Windows 和 Codex Desktop 的开源项�
 - Python 仓库审计 CLI；
 - GitHub Actions CI；
 - 架构图、运行逻辑图、作用图、产品图；
-- Image2 位图生成提示词和成品图。
+- Image2 位图生成提示词和成品图；
+- GitHub 热度路线图和发布帖草稿。
 
 ## Image2 设计资产
 
@@ -120,6 +137,21 @@ audit-ok
 它的差异化定位更具体：
 
 > Windows + Codex Desktop + 多窗口 MCP 进程爆炸 + 本机共享 HTTP broker + 可复现验证。
+
+## GitHub 增长路线
+
+公开路线图见：[docs/github-heat-roadmap.zh.md](docs/github-heat-roadmap.zh.md)。简短版本：
+
+1. 把这个仓库做成 Codex Desktop + MCP 进程放大的旗舰案例。
+2. 抽出可复用的 runtime privacy 检查工具。
+3. 增加其他 MCP-heavy agent 桌面客户端的示例。
+4. 使用 [docs/launch-post.zh.md](docs/launch-post.zh.md) 作为发布帖底稿。
+
+补充发布资产：
+
+- [ROADMAP.md](ROADMAP.md)
+- [docs/current-source-check.zh.md](docs/current-source-check.zh.md)
+- [docs/demo-benchmark-plan.zh.md](docs/demo-benchmark-plan.zh.md)
 
 ## 许可证
 
