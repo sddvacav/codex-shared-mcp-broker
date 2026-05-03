@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "codex-shared-mcp-broker"
-version = "0.1.2"
+version = "0.2.0"
 description = "Windows-oriented Codex Desktop shared MCP broker configuration, documentation, and validation toolkit."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -37,6 +37,7 @@ test = ["pytest>=8.0"]
 
 [project.scripts]
 codex-shared-mcp-audit = "codex_shared_mcp_broker.audit:main"
+codex-shared-mcp-diagnose = "codex_shared_mcp_broker.diagnostics:main"
 
 [project.urls]
 Homepage = "https://github.com/sddvacav/codex-shared-mcp-broker"

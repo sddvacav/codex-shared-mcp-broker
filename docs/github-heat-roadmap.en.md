@@ -31,9 +31,10 @@ The sharper positioning is:
 
 ### v0.2.0 — Runtime Diagnostics
 
-- Add a standalone command that reports current MCP entries, broker reachability, and likely stdio fan-out.
-- Emit a Markdown diagnostic report.
-- Add red/yellow/green status for public sharing.
+- Status: delivered.
+- Added a standalone command that reports current MCP entries, broker reachability, and likely stdio fan-out.
+- Emits Markdown or JSON diagnostic reports.
+- Adds red/yellow/green status for public sharing.
 
 ### v0.3.0 — Cross-Client MCP Runtime Notes
 
@@ -75,4 +76,3 @@ The sharper positioning is:
 - Do not claim to be the first MCP proxy.
 - Do not publish private machine configuration.
 - Do not include credentials, account state, production queues, or local gateway routing.
-

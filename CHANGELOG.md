@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 - 2026-05-04
+
+- Added `codex-shared-mcp-diagnose`, a privacy-safe runtime diagnostic command.
+- Added Markdown and JSON diagnostic report output.
+- Added checks for Codex config policy, shared HTTP MCP URLs, live `codex mcp list` transport shape, broker port reachability, and stdio-like fan-out.
+- Added diagnostics tests covering sanitized output and stdio detection.
+- Updated public docs for the v0.2 runtime diagnostics workflow.
+
 ## 0.1.2 - 2026-05-03
 
 - Added GitHub growth materials for Codex/MCP/agent runtime positioning.

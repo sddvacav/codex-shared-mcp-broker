@@ -8,10 +8,11 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 
 ## v0.2.0 - Runtime Diagnostics
 
-- Add a standalone diagnostic command for local MCP runtime state.
-- Report Codex MCP entries, broker reachability, and likely stdio fan-out.
-- Produce a sanitized Markdown report that can be attached to GitHub issues.
-- Keep private paths, tokens, account state, and gateway routing out of the report.
+- Status: delivered.
+- Added a standalone diagnostic command for local MCP runtime state.
+- Reports Codex MCP entries, broker reachability, and likely stdio fan-out.
+- Produces sanitized Markdown or JSON reports that can be attached to GitHub issues.
+- Keeps private paths, tokens, account state, and gateway routing out of the report.
 
 ## v0.3.0 - Cross-Client Runtime Notes
 

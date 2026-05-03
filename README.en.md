@@ -104,6 +104,22 @@ python -m pytest
 codex-shared-mcp-audit .
 ```
 
+Generate a privacy-safe runtime diagnostic report:
+
+```powershell
+codex-shared-mcp-diagnose --output codex-runtime-report.md
+```
+
+The diagnostic report summarizes:
+
+- Codex policy values such as `xhigh`, `400000`, and `360000`;
+- whether MCP entries use shared local HTTP URLs;
+- whether live `codex mcp list` output still exposes stdio-style tool commands;
+- whether the broker port is reachable;
+- red/yellow/green status and next actions.
+
+It does not print private absolute paths, account IDs, tokens, or local routing details.
+
 On a configured machine, run:
 
 ```powershell

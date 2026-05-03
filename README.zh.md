@@ -104,6 +104,22 @@ python -m pytest
 codex-shared-mcp-audit .
 ```
 
+生成隐私安全的 runtime 诊断报告：
+
+```powershell
+codex-shared-mcp-diagnose --output codex-runtime-report.md
+```
+
+诊断报告会汇总：
+
+- `xhigh`、`400000`、`360000` 等 Codex 策略值；
+- MCP 条目是否使用共享本机 HTTP URL；
+- 实时 `codex mcp list` 输出里是否仍有 stdio 风格工具命令；
+- broker 端口是否可达；
+- 红/黄/绿状态和下一步建议。
+
+它不会输出私有绝对路径、账号 ID、token 或本地路由细节。
+
 已配置机器上的预检：
 
 ```powershell

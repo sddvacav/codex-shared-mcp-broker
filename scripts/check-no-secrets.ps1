@@ -22,7 +22,11 @@ $files = Get-ChildItem -Recurse -File |
 $failed = $false
 foreach ($file in $files) {
     $relative = Resolve-Path -Relative $file.FullName
-    if ($relative -eq ".\src\codex_shared_mcp_broker\audit.py" -or $relative -eq ".\scripts\check-no-secrets.ps1") {
+    if (
+        $relative -eq ".\src\codex_shared_mcp_broker\audit.py" -or
+        $relative -eq ".\src\codex_shared_mcp_broker\diagnostics.py" -or
+        $relative -eq ".\scripts\check-no-secrets.ps1"
+    ) {
         continue
     }
     $text = Get-Content -Raw -Path $file.FullName -ErrorAction SilentlyContinue

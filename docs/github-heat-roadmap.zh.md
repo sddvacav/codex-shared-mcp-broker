@@ -31,8 +31,9 @@
 
 ### v0.2.0 — Runtime Diagnostics
 
+- 状态：已交付。
 - 增加独立诊断命令，报告当前 MCP 列表、broker 可达性和潜在 stdio 进程放大。
-- 输出 Markdown 诊断报告。
+- 输出 Markdown 或 JSON 诊断报告。
 - 用红/黄/绿状态方便公开分享。
 
 ### v0.3.0 — Cross-Client MCP Runtime Notes
@@ -75,4 +76,3 @@
 - 不声称自己是第一个 MCP proxy。
 - 不发布私有机器配置。
 - 不包含凭证、账号状态、生产队列或本地网关路由。
-

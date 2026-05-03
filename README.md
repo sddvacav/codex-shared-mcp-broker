@@ -13,6 +13,12 @@ Codex Shared MCP Broker is a Windows-oriented open-source package for documentin
 
 This repository keeps the high-quality setting intact: `model_reasoning_effort = "xhigh"`. The optimization is not to reduce reasoning quality. The optimization is to move MCP backends behind one shared local HTTP broker and validate that Codex windows connect through HTTP MCP URLs.
 
+Runtime diagnostics:
+
+```powershell
+codex-shared-mcp-diagnose --output codex-runtime-report.md
+```
+
 ![Architecture](assets/svg/architecture.en.svg)
 
 ## Quick Start

@@ -42,6 +42,7 @@ REQUIRED_FILES = [
     "examples/codex-config.toml",
     "examples/named_servers.example.json",
     "scripts/preflight.ps1",
+    "src/codex_shared_mcp_broker/diagnostics.py",
     "assets/svg/architecture.en.svg",
     "assets/svg/architecture.zh.svg",
     "assets/svg/workflow.en.svg",
@@ -84,6 +85,7 @@ PRIVACY_PATTERNS = [
 PRIVACY_ALLOWLIST = {
     "scripts/check-no-secrets.ps1",
     "src/codex_shared_mcp_broker/audit.py",
+    "src/codex_shared_mcp_broker/diagnostics.py",
 }
 
 
