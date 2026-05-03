@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "description": "Sanitized example backend registry for a shared MCP broker. Replace commands and paths with your own safe local tools.",
+  "listen": {
+    "host": "127.0.0.1",
+    "port": 38808
+  },
+  "servers": {
+    "fetch": {
+      "transport": "stdio",
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "git": {
+      "transport": "stdio",
+      "command": "uvx",
+      "args": ["mcp-server-git", "--repository", "C:/path/to/your/repository"]
+    },
+    "time": {
+      "transport": "stdio",
+      "command": "uvx",
+      "args": ["mcp-server-time", "--local-timezone", "Asia/Shanghai"]
+    },
+    "filesystem": {
+      "transport": "stdio",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/path/to/allowed/workspace"]
+    },
+    "local-tools": {
+      "transport": "stdio",
+      "command": "python",
+      "args": ["C:/path/to/local-tools/server.py"]
+    }
+  }
+}

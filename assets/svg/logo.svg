@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Shared MCP Broker logo</title>
+  <desc id="desc">A central broker node connecting multiple windows to shared tool endpoints.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#263238"/>
+    </linearGradient>
+    <linearGradient id="node" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <g fill="none" stroke="#94a3b8" stroke-width="14" stroke-linecap="round">
+    <path d="M150 160 C205 210 210 300 150 352"/>
+    <path d="M362 160 C307 210 302 300 362 352"/>
+    <path d="M168 256 H344"/>
+    <path d="M256 142 V370"/>
+  </g>
+  <circle cx="256" cy="256" r="82" fill="url(#node)"/>
+  <circle cx="150" cy="160" r="28" fill="#f59e0b"/>
+  <circle cx="150" cy="352" r="28" fill="#f59e0b"/>
+  <circle cx="362" cy="160" r="28" fill="#e2e8f0"/>
+  <circle cx="362" cy="352" r="28" fill="#e2e8f0"/>
+  <path d="M224 257 L249 282 L294 225" fill="none" stroke="#0f172a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

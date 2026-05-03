@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">作用图</title>
+  <desc id="desc">共享 broker 减少进程放大，同时保留高强度推理能力。</desc>
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <text x="64" y="72" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#111827">作用与意义</text>
+  <g font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif">
+    <rect x="94" y="150" width="500" height="420" rx="20" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+    <text x="134" y="205" font-size="26" font-weight="700" fill="#881337">优化前</text>
+    <text x="134" y="245" font-size="18" fill="#7f1d1d">每个窗口重复启动重型工具子进程。</text>
+    <text x="134" y="280" font-size="18" fill="#7f1d1d">第二、第三个窗口迅速放大本机负载。</text>
+    <text x="134" y="315" font-size="18" fill="#7f1d1d">科研任务还没进入深推理就先卡住。</text>
+    <g fill="#fecdd3" stroke="#fb7185" stroke-width="2">
+      <circle cx="178" cy="400" r="28"/>
+      <circle cx="250" cy="400" r="28"/>
+      <circle cx="322" cy="400" r="28"/>
+      <circle cx="394" cy="400" r="28"/>
+      <circle cx="466" cy="400" r="28"/>
+    </g>
+    <text x="154" y="475" font-size="16" fill="#881337">重复 MCP 进程树</text>
+
+    <rect x="686" y="150" width="500" height="420" rx="20" fill="#ecfdf5" stroke="#16a34a" stroke-width="3"/>
+    <text x="726" y="205" font-size="26" font-weight="700" fill="#14532d">优化后</text>
+    <text x="726" y="245" font-size="18" fill="#166534">所有窗口复用共享 HTTP MCP 端点。</text>
+    <text x="726" y="280" font-size="18" fill="#166534">broker 统一托管后端进程生命周期。</text>
+    <text x="726" y="315" font-size="18" fill="#166534">保留 xhigh 推理用于复杂科研任务。</text>
+    <circle cx="936" cy="408" r="62" fill="#bbf7d0" stroke="#22c55e" stroke-width="4"/>
+    <text x="896" y="416" font-size="20" font-weight="700" fill="#14532d">Broker</text>
+  </g>
+  <path d="M606 360 H674" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round"/>
+  <path d="M650 334 L674 360 L650 386" fill="none" stroke="#334155" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">共享 MCP 架构</title>
+  <desc id="desc">多个 Codex Desktop 窗口通过一个本机 HTTP MCP broker 连接共享后端工具。</desc>
+  <rect width="1280" height="720" fill="#f8fafc"/>
+  <text x="64" y="70" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#0f172a">Codex 共享 MCP Broker</text>
+  <text x="64" y="108" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#475569">把 N 个窗口 x M 套工具压缩成一棵可控的 broker 进程树。</text>
+
+  <g font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif">
+    <rect x="64" y="160" width="270" height="400" rx="18" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <text x="94" y="205" font-size="24" font-weight="700" fill="#0f172a">Codex 窗口</text>
+    <text x="94" y="236" font-size="16" fill="#475569">10 个窗口，每个 8 个智能体</text>
+    <g fill="#ffffff" stroke="#38bdf8" stroke-width="2">
+      <rect x="94" y="280" width="190" height="46" rx="10"/>
+      <rect x="112" y="346" width="190" height="46" rx="10"/>
+      <rect x="94" y="412" width="190" height="46" rx="10"/>
+    </g>
+    <text x="114" y="309" font-size="15" fill="#0f172a">Codex Desktop 1</text>
+    <text x="132" y="375" font-size="15" fill="#0f172a">Codex Desktop 2</text>
+    <text x="114" y="441" font-size="15" fill="#0f172a">Codex Desktop N</text>
+
+    <rect x="485" y="220" width="310" height="260" rx="22" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+    <text x="530" y="278" font-size="28" font-weight="700" fill="#0f172a">本机 HTTP broker</text>
+    <text x="530" y="312" font-size="17" fill="#475569">127.0.0.1:38808</text>
+    <text x="530" y="350" font-size="16" fill="#14532d">单一进程归属</text>
+    <text x="530" y="378" font-size="16" fill="#14532d">命名 MCP 端点</text>
+    <text x="530" y="406" font-size="16" fill="#14532d">共享连接策略</text>
+
+    <rect x="945" y="150" width="270" height="420" rx="18" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+    <text x="975" y="198" font-size="24" font-weight="700" fill="#0f172a">MCP 后端</text>
+    <text x="975" y="228" font-size="16" fill="#475569">stdio 工具只在 broker 后方运行</text>
+    <g fill="#ffffff" stroke="#fb923c" stroke-width="2">
+      <rect x="975" y="270" width="190" height="38" rx="9"/>
+      <rect x="975" y="322" width="190" height="38" rx="9"/>
+      <rect x="975" y="374" width="190" height="38" rx="9"/>
+      <rect x="975" y="426" width="190" height="38" rx="9"/>
+      <rect x="975" y="478" width="190" height="38" rx="9"/>
+    </g>
+    <text x="995" y="295" font-size="14" fill="#0f172a">文件系统</text>
+    <text x="995" y="347" font-size="14" fill="#0f172a">git / fetch / time</text>
+    <text x="995" y="399" font-size="14" fill="#0f172a">memory / context7</text>
+    <text x="995" y="451" font-size="14" fill="#0f172a">论文检索</text>
+    <text x="995" y="503" font-size="14" fill="#0f172a">本地工具</text>
+  </g>
+
+  <g fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M334 350 H474"/>
+    <path d="M795 350 H934"/>
+    <path d="M452 332 L474 350 L452 368"/>
+    <path d="M912 332 L934 350 L912 368"/>
+  </g>
+  <g font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">
+    <text x="365" y="326">HTTP MCP URL</text>
+    <text x="825" y="326">broker 托管 stdio</text>
+  </g>
+</svg>

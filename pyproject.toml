@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-shared-mcp-broker"
+version = "0.1.0"
+description = "Windows-oriented Codex Desktop shared MCP broker configuration, documentation, and validation toolkit."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "sddvacav" }
+]
+keywords = [
+  "codex",
+  "mcp",
+  "model-context-protocol",
+  "broker",
+  "windows",
+  "desktop",
+  "performance"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Win32 (MS Windows)",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: System :: Systems Administration"
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+codex-shared-mcp-audit = "codex_shared_mcp_broker.audit:main"
+
+[project.urls]
+Homepage = "https://github.com/sddvacav/codex-shared-mcp-broker"
+Issues = "https://github.com/sddvacav/codex-shared-mcp-broker/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

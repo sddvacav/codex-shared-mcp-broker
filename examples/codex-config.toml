@@ -1,0 +1,51 @@
+# Sanitized Codex Desktop configuration example.
+# This file is a public template. Do not paste local auth tokens or private paths here.
+
+model = "gpt-5.5"
+model_provider = "OpenAI"
+model_reasoning_effort = "xhigh"
+model_context_window = 400000
+model_auto_compact_token_limit = 360000
+effective_context_window_percent = 100
+service_tier = "fast"
+tool_output_token_limit = 6000
+
+[features]
+fast_mode = true
+request_compress = true
+unified_exec = true
+
+[agents]
+# Capacity target for 10 windows x 8 agents, while avoiding unbounded process fan-out.
+max_threads = 96
+max_depth = 8
+
+[mcp_servers.local-tools]
+url = "http://127.0.0.1:38808/servers/local-tools/mcp"
+
+[mcp_servers.filesystem]
+url = "http://127.0.0.1:38808/servers/filesystem/mcp"
+
+[mcp_servers.git]
+url = "http://127.0.0.1:38808/servers/git/mcp"
+
+[mcp_servers.fetch]
+url = "http://127.0.0.1:38808/servers/fetch/mcp"
+
+[mcp_servers.time]
+url = "http://127.0.0.1:38808/servers/time/mcp"
+
+[mcp_servers.memory]
+url = "http://127.0.0.1:38808/servers/memory/mcp"
+
+[mcp_servers.context7]
+url = "http://127.0.0.1:38808/servers/context7/mcp"
+
+[mcp_servers.magic]
+url = "http://127.0.0.1:38808/servers/magic/mcp"
+
+[mcp_servers.paper-search]
+url = "http://127.0.0.1:38808/servers/paper-search/mcp"
+
+[mcp_servers.sequential-thinking]
+url = "http://127.0.0.1:38808/servers/sequential-thinking/mcp"

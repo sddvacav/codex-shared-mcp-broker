@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">运行流程</title>
+  <desc id="desc">共享 MCP broker 的启动和验证流程。</desc>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="64" y="70" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#111827">运行逻辑图</text>
+  <g font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif">
+    <g fill="#f1f5f9" stroke="#64748b" stroke-width="2">
+      <rect x="90" y="170" width="180" height="96" rx="16"/>
+      <rect x="320" y="170" width="180" height="96" rx="16"/>
+      <rect x="550" y="170" width="180" height="96" rx="16"/>
+      <rect x="780" y="170" width="180" height="96" rx="16"/>
+      <rect x="1010" y="170" width="180" height="96" rx="16"/>
+    </g>
+    <text x="128" y="213" font-size="18" font-weight="700" fill="#0f172a">1. 预检</text>
+    <text x="119" y="241" font-size="14" fill="#475569">检查配置和端口</text>
+    <text x="354" y="213" font-size="18" font-weight="700" fill="#0f172a">2. Broker</text>
+    <text x="348" y="241" font-size="14" fill="#475569">启动单一归属</text>
+    <text x="584" y="213" font-size="18" font-weight="700" fill="#0f172a">3. Codex</text>
+    <text x="582" y="241" font-size="14" fill="#475569">使用 HTTP MCP URL</text>
+    <text x="812" y="213" font-size="18" font-weight="700" fill="#0f172a">4. 验证</text>
+    <text x="806" y="241" font-size="14" fill="#475569">无散落 MCP 进程</text>
+    <text x="1044" y="213" font-size="18" font-weight="700" fill="#0f172a">5. 运行</text>
+    <text x="1036" y="241" font-size="14" fill="#475569">并行科研任务</text>
+  </g>
+  <g fill="none" stroke="#0ea5e9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M270 218 H318"/>
+    <path d="M500 218 H548"/>
+    <path d="M730 218 H778"/>
+    <path d="M960 218 H1008"/>
+    <path d="M303 200 L318 218 L303 236"/>
+    <path d="M533 200 L548 218 L533 236"/>
+    <path d="M763 200 L778 218 L763 236"/>
+    <path d="M993 200 L1008 218 L993 236"/>
+  </g>
+  <g font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif">
+    <rect x="128" y="380" width="1024" height="150" rx="18" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="174" y="432" font-size="24" font-weight="700" fill="#164e63">不变量</text>
+    <text x="174" y="468" font-size="18" fill="#155e75">Codex 窗口不再各自拉起重型 MCP stdio 进程树，而是连接稳定的本机 HTTP 端点。</text>
+    <text x="174" y="502" font-size="18" fill="#155e75">保留 xhigh 推理强度；性能优化来自减少本机进程放大。</text>
+  </g>
+</svg>
