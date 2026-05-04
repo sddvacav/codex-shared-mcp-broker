@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.0 - 2026-05-04
+
+- Added hosted material-intelligence product blueprint documentation.
+- Added bilingual hosted product architecture diagrams.
+- Clarified the split between public launch assets, SaaS frontend, backend API, database, storage, workers, billing, observability, and region services.
+- Added security boundaries for what stays public vs private.
+
 ## 0.8.0 - 2026-05-04
 
 - Added a static GitHub Pages landing page.

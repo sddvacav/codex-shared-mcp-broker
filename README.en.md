@@ -210,6 +210,7 @@ Additional launch assets:
 - [docs/remotion-demo.en.md](docs/remotion-demo.en.md)
 - [docs/deployment-commercial-chain.en.md](docs/deployment-commercial-chain.en.md)
 - [docs/material-library.en.md](docs/material-library.en.md)
+- [docs/hosted-product-blueprint.en.md](docs/hosted-product-blueprint.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
 - [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 

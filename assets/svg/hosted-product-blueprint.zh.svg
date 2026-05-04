@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">托管产品蓝图</title>
+  <desc id="desc">从静态发布页到托管材料智能平台的架构。</desc>
+  <rect width="1400" height="820" fill="#f8fafc"/>
+  <text x="70" y="70" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="36" font-weight="700" fill="#0f172a">托管产品蓝图</text>
+  <text x="70" y="108" font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif" font-size="18" fill="#475569">从 GitHub 曝光到材料智能付费执行</text>
+
+  <g font-family="Microsoft YaHei, Segoe UI, Arial, sans-serif">
+    <rect x="70" y="170" width="250" height="150" rx="14" fill="#dbeafe" stroke="#93c5fd"/>
+    <text x="100" y="220" font-size="24" font-weight="700" fill="#1e3a8a">GitHub 仓库</text>
+    <text x="100" y="255" font-size="16" fill="#1e40af">信任、源码、release</text>
+
+    <rect x="390" y="170" width="250" height="150" rx="14" fill="#e0f2fe" stroke="#7dd3fc"/>
+    <text x="420" y="220" font-size="24" font-weight="700" fill="#075985">GitHub Pages</text>
+    <text x="420" y="255" font-size="16" fill="#0369a1">发布页、演示、SEO</text>
+
+    <rect x="710" y="170" width="250" height="150" rx="14" fill="#dcfce7" stroke="#86efac"/>
+    <text x="740" y="220" font-size="24" font-weight="700" fill="#14532d">SaaS 前端</text>
+    <text x="740" y="255" font-size="16" fill="#166534">登录后的工作流</text>
+
+    <rect x="1030" y="170" width="250" height="150" rx="14" fill="#fef3c7" stroke="#fcd34d"/>
+    <text x="1060" y="220" font-size="24" font-weight="700" fill="#78350f">后端 API</text>
+    <text x="1060" y="255" font-size="16" fill="#92400e">任务、计费、认证</text>
+
+    <rect x="190" y="440" width="250" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="220" y="490" font-size="24" font-weight="700" fill="#0f172a">数据库</text>
+    <text x="220" y="525" font-size="16" fill="#475569">用户、项目、任务</text>
+
+    <rect x="510" y="440" width="250" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="540" y="490" font-size="24" font-weight="700" fill="#0f172a">对象存储</text>
+    <text x="540" y="525" font-size="16" fill="#475569">文件和生成产物</text>
+
+    <rect x="830" y="440" width="250" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="860" y="490" font-size="24" font-weight="700" fill="#0f172a">Worker 池</text>
+    <text x="860" y="525" font-size="16" fill="#475569">GPU/CPU 执行</text>
+
+    <rect x="1150" y="440" width="180" height="150" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="1180" y="490" font-size="24" font-weight="700" fill="#0f172a">区域</text>
+    <text x="1180" y="525" font-size="16" fill="#475569">路由规则</text>
+
+    <path d="M320 245 H390" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M640 245 H710" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M960 245 H1030" stroke="#64748b" stroke-width="4" marker-end="url(#arrow)"/>
+    <path d="M1155 320 V405 H315 V440" stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M1155 320 V405 H635 V440" stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M1155 320 V405 H955 V440" stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M1155 320 V440" stroke="#64748b" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+
+    <rect x="250" y="680" width="900" height="58" rx="12" fill="#0f172a"/>
+    <text x="315" y="717" font-size="22" font-weight="700" fill="#ffffff">公开仓库创造需求，托管平台捕获付费执行价值。</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+</svg>

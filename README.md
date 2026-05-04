@@ -82,6 +82,8 @@ See:
 - [部署和商业链条](docs/deployment-commercial-chain.zh.md)
 - [Material library](docs/material-library.en.md)
 - [素材库](docs/material-library.zh.md)
+- [Hosted product blueprint](docs/hosted-product-blueprint.en.md)
+- [托管产品蓝图](docs/hosted-product-blueprint.zh.md)
 - [Current source check](docs/current-source-check.en.md)
 - [当前来源核对](docs/current-source-check.zh.md)
 - [Cross-client runtime notes](docs/cross-client-runtime-notes.en.md)

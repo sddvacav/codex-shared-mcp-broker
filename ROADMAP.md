@@ -64,9 +64,16 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 
 ## v0.9.0 - Hosted Product Blueprint
 
-- Draft the deployment blueprint for the full material-intelligence platform.
-- Separate static marketing, SaaS frontend, backend API, database, object storage, workers, and billing.
-- Keep secrets and production infrastructure out of the public repo.
+- Status: delivered.
+- Drafted the deployment blueprint for the full material-intelligence platform.
+- Separated static marketing, SaaS frontend, backend API, database, object storage, workers, billing, observability, compliance, and region services.
+- Added public/private security boundaries.
+
+## v0.10.0 - Product Conversion Funnel
+
+- Add waitlist, contact, consulting, and enterprise conversion copy.
+- Keep the implementation static unless a real backend is selected.
+- Do not collect personal data through GitHub Pages without a proper backend and policy.
 
 ## Non-Goals
 

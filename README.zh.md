@@ -210,6 +210,7 @@ audit-ok
 - [docs/remotion-demo.zh.md](docs/remotion-demo.zh.md)
 - [docs/deployment-commercial-chain.zh.md](docs/deployment-commercial-chain.zh.md)
 - [docs/material-library.zh.md](docs/material-library.zh.md)
+- [docs/hosted-product-blueprint.zh.md](docs/hosted-product-blueprint.zh.md)
 - [docs/current-source-check.zh.md](docs/current-source-check.zh.md)
 - [docs/demo-benchmark-plan.zh.md](docs/demo-benchmark-plan.zh.md)
 
