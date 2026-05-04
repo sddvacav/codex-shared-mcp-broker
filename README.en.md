@@ -143,6 +143,15 @@ agent-runtime-privacy-guard .
 
 It checks public-release artifacts for common secret shapes and private local agent runtime details without printing matched secret values.
 
+Render the Remotion demo:
+
+```powershell
+npm install
+npm run video:render
+```
+
+Demo video: [assets/remotion/codex-shared-mcp-demo.mp4](assets/remotion/codex-shared-mcp-demo.mp4)
+
 On a configured machine, run:
 
 ```powershell
@@ -196,6 +205,7 @@ Additional launch assets:
 - [docs/demo-script.en.md](docs/demo-script.en.md)
 - [docs/release-asset-pack.en.md](docs/release-asset-pack.en.md)
 - [docs/design-flow-v0.06.en.md](docs/design-flow-v0.06.en.md)
+- [docs/remotion-demo.en.md](docs/remotion-demo.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
 - [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 

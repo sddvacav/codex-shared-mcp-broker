@@ -13,6 +13,8 @@ build/
 dist/
 *.zip
 *.tar.gz
+node_modules/
+.remotion/
 
 # Local secrets and machine state
 .env

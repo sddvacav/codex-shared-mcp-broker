@@ -66,9 +66,17 @@
 
 ### v0.7.0 — Demo Video
 
-- 按脚本录制或组装短演示。
+- 状态：已交付。
+- 增加 Remotion 工程。
+- 渲染真实 MP4 演示视频和 poster。
 - 展示合成 benchmark：N 个窗口 x M 个工具 server 的进程归属对比。
 - 保持合成数据和隐私安全。
+
+### v0.8.0 — Distribution Page
+
+- 为发布资产建立静态页面。
+- 嵌入 Remotion 视频和 benchmark 图。
+- 保持静态和隐私安全。
 
 ## 发布渠道
 

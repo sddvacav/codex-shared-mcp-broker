@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "codex-shared-mcp-broker"
-version = "0.6.0"
+version = "0.7.0"
 description = "Windows-oriented Codex Desktop shared MCP broker configuration, documentation, and validation toolkit."
 readme = "README.md"
 requires-python = ">=3.11"

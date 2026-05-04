@@ -51,6 +51,8 @@ REQUIRED_FILES = [
     "docs/launch-post.zh.md",
     "docs/release-asset-pack.en.md",
     "docs/release-asset-pack.zh.md",
+    "docs/remotion-demo.en.md",
+    "docs/remotion-demo.zh.md",
     "docs/design-flow-v0.06.en.md",
     "docs/design-flow-v0.06.zh.md",
     "examples/codex-config.toml",
@@ -74,6 +76,8 @@ REQUIRED_FILES = [
     "assets/svg/product.zh.svg",
     "assets/image2/cover.png",
     "assets/image2/product-overview.png",
+    "assets/remotion/codex-shared-mcp-demo.mp4",
+    "assets/remotion/codex-shared-mcp-demo-poster.png",
 ]
 
 TEXT_FILE_SUFFIXES = {
@@ -169,6 +173,7 @@ def audit_bilingual_docs(root: Path) -> list[Finding]:
         ("docs/github-heat-roadmap.en.md", "docs/github-heat-roadmap.zh.md"),
         ("docs/launch-post.en.md", "docs/launch-post.zh.md"),
         ("docs/release-asset-pack.en.md", "docs/release-asset-pack.zh.md"),
+        ("docs/remotion-demo.en.md", "docs/remotion-demo.zh.md"),
         ("docs/release-checklist.en.md", "docs/release-checklist.zh.md"),
     ]
     for en, zh in pairs:

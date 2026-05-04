@@ -1,0 +1,17 @@
+{
+  "name": "codex-shared-mcp-broker-video",
+  "private": true,
+  "version": "0.7.0",
+  "type": "module",
+  "scripts": {
+    "video:preview": "remotion preview remotion/index.ts",
+    "video:render": "remotion render remotion/index.ts CodexSharedMcpDemo assets/remotion/codex-shared-mcp-demo.mp4 --codec=h264 --pixel-format=yuv420p",
+    "video:still": "remotion still remotion/index.ts CodexSharedMcpDemo assets/remotion/codex-shared-mcp-demo-poster.png --frame=45"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.456",
+    "remotion": "4.0.456",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {}
+}

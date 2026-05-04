@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0 - 2026-05-04
+
+- Added a Remotion animation project.
+- Added rendered MP4 and poster assets for the public demo.
+- Added Remotion documentation and render commands.
+- Reused repository SVG and Image2 assets through Remotion `staticFile()` assets.
+
 ## 0.6.0 - 2026-05-04
 
 - Added a short demo script and storyboard SVGs.

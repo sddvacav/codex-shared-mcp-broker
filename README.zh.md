@@ -143,6 +143,15 @@ agent-runtime-privacy-guard .
 
 它会检查公开发布产物中的常见密钥形态和本地 agent runtime 隐私细节，但不会打印匹配到的密钥值。
 
+渲染 Remotion 演示视频：
+
+```powershell
+npm install
+npm run video:render
+```
+
+演示视频：[assets/remotion/codex-shared-mcp-demo.mp4](assets/remotion/codex-shared-mcp-demo.mp4)
+
 已配置机器上的预检：
 
 ```powershell
@@ -196,6 +205,7 @@ audit-ok
 - [docs/demo-script.zh.md](docs/demo-script.zh.md)
 - [docs/release-asset-pack.zh.md](docs/release-asset-pack.zh.md)
 - [docs/design-flow-v0.06.zh.md](docs/design-flow-v0.06.zh.md)
+- [docs/remotion-demo.zh.md](docs/remotion-demo.zh.md)
 - [docs/current-source-check.zh.md](docs/current-source-check.zh.md)
 - [docs/demo-benchmark-plan.zh.md](docs/demo-benchmark-plan.zh.md)
 

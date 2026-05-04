@@ -31,6 +31,13 @@ Agent runtime privacy guard:
 agent-runtime-privacy-guard .
 ```
 
+Remotion demo video:
+
+```powershell
+npm install
+npm run video:render
+```
+
 ![Architecture](assets/svg/architecture.en.svg)
 
 ## Quick Start
@@ -63,6 +70,8 @@ See:
 - [发布素材包](docs/release-asset-pack.zh.md)
 - [Design flow 0.06](docs/design-flow-v0.06.en.md)
 - [设计流程 0.06](docs/design-flow-v0.06.zh.md)
+- [Remotion demo](docs/remotion-demo.en.md)
+- [Remotion 演示视频](docs/remotion-demo.zh.md)
 - [Current source check](docs/current-source-check.en.md)
 - [当前来源核对](docs/current-source-check.zh.md)
 - [Cross-client runtime notes](docs/cross-client-runtime-notes.en.md)

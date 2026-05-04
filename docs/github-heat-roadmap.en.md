@@ -66,9 +66,17 @@ The sharper positioning is:
 
 ### v0.7.0 — Demo Video
 
-- Record or assemble the short demo from the script.
-- Show the synthetic benchmark: N windows x M tool servers before/after process ownership.
-- Keep it synthetic and privacy-safe.
+- Status: delivered.
+- Added a Remotion project.
+- Rendered a real MP4 demo and poster image.
+- Showed the synthetic benchmark: N windows x M tool servers before/after process ownership.
+- Kept it synthetic and privacy-safe.
+
+### v0.8.0 — Distribution Page
+
+- Build a static page for the launch assets.
+- Embed the Remotion video and benchmark image.
+- Keep it static and privacy-safe.
 
 ## Launch Channels
 

@@ -47,9 +47,17 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 
 ## v0.7.0 - Demo Video
 
-- Record or assemble the short demo from the script.
-- Compare process ownership patterns before and after the shared broker pattern.
-- Keep all benchmark data synthetic and privacy-safe.
+- Status: delivered.
+- Added a Remotion project.
+- Rendered a real MP4 demo and poster image.
+- Reused repository SVG and Image2 brand assets.
+- Kept all benchmark data synthetic and privacy-safe.
+
+## v0.8.0 - Distribution Page
+
+- Build a small static landing page for the release assets.
+- Embed the Remotion video and benchmark image.
+- Keep the page static and privacy-safe.
 
 ## Non-Goals
 
