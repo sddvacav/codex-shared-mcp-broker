@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex Shared MCP Broker</title>
+    <meta
+      name="description"
+      content="A Windows-oriented toolkit for Codex Desktop MCP fan-out diagnostics, synthetic benchmarks, privacy guard, and Remotion demo assets."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Primary">
+        <div class="brand">
+          <img src="./assets/logo.svg" alt="" />
+          <span>Codex Shared MCP Broker</span>
+        </div>
+        <div class="links">
+          <a href="#toolchain">Toolchain</a>
+          <a href="#demo">Demo</a>
+          <a href="#deploy">Deploy</a>
+          <a href="https://github.com/sddvacav/codex-shared-mcp-broker">GitHub</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy">
+          <p class="eyebrow">Public stage 0.08</p>
+          <h1>Keep xhigh reasoning. Fix local MCP fan-out.</h1>
+          <p class="lead">
+            A release-safe toolkit for Codex Desktop power users: diagnose local MCP
+            runtime shape, explain process fan-out with a synthetic benchmark, and
+            scan public artifacts before launch.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="https://github.com/sddvacav/codex-shared-mcp-broker/releases/latest">Latest Release</a>
+            <a class="button secondary" href="#demo">Watch Demo</a>
+          </div>
+        </section>
+        <section class="hero-media" aria-label="Product preview">
+          <img src="./assets/product-overview.png" alt="Product overview for the shared MCP broker workflow" />
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section id="toolchain" class="band">
+        <div class="section-title">
+          <p class="eyebrow">Evidence-first workflow</p>
+          <h2>Diagnose, benchmark, guard, publish.</h2>
+        </div>
+        <div class="cards">
+          <article>
+            <h3>Runtime diagnostics</h3>
+            <p>Check Codex policy values, MCP URL shape, live transport hints, and broker reachability.</p>
+            <code>codex-shared-mcp-diagnose</code>
+          </article>
+          <article>
+            <h3>Synthetic benchmark</h3>
+            <p>Explain the ownership shift from per-window stdio process trees to one broker-owned backend pool.</p>
+            <code>codex-shared-mcp-benchmark</code>
+          </article>
+          <article>
+            <h3>Privacy guard</h3>
+            <p>Scan for tokens, private paths, local gateway names, runtime traces, and risky release files.</p>
+            <code>agent-runtime-privacy-guard</code>
+          </article>
+        </div>
+      </section>
+
+      <section id="demo" class="band split">
+        <div>
+          <p class="eyebrow">Remotion demo</p>
+          <h2>Real rendered launch video.</h2>
+          <p>
+            The video uses the repository's SVG diagrams and Image2 brand assets through a
+            Remotion timeline. Benchmark numbers are synthetic and privacy-safe.
+          </p>
+        </div>
+        <video controls poster="./assets/codex-shared-mcp-demo-poster.png">
+          <source src="./assets/codex-shared-mcp-demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section id="benchmark" class="band">
+        <div class="section-title">
+          <p class="eyebrow">Synthetic fan-out model</p>
+          <h2>80 direct stdio units become 9 broker-owned units.</h2>
+        </div>
+        <img class="wide-asset" src="./assets/benchmark.en.svg" alt="Synthetic MCP fan-out benchmark" />
+      </section>
+
+      <section id="deploy" class="band split">
+        <div>
+          <p class="eyebrow">Deployment boundary</p>
+          <h2>GitHub Pages is for the static launch surface.</h2>
+          <p>
+            This page is static: HTML, CSS, images, and video. It does not run a backend,
+            database, job queue, authentication, location service, or model inference.
+          </p>
+        </div>
+        <div class="deploy-list">
+          <p><strong>Good fit:</strong> project landing page, docs, launch video, release assets.</p>
+          <p><strong>Not enough for:</strong> full material-intelligence platforms, user accounts, database-backed workflows, paid APIs, location services, or compute-heavy jobs.</p>
+          <p><strong>Business chain:</strong> GitHub Pages for awareness, app backend for product value, cloud infra for paid execution.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>MIT License</span>
+      <a href="https://github.com/sddvacav/codex-shared-mcp-broker">GitHub repository</a>
+    </footer>
+  </body>
+</html>

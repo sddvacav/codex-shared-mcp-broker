@@ -74,9 +74,17 @@ The sharper positioning is:
 
 ### v0.8.0 — Distribution Page
 
-- Build a static page for the launch assets.
-- Embed the Remotion video and benchmark image.
-- Keep it static and privacy-safe.
+- Status: delivered.
+- Built a static page for the launch assets.
+- Embedded the Remotion video and benchmark image.
+- Added deployment/commercial-chain docs and a legal material library index.
+- Kept it static and privacy-safe.
+
+### v0.9.0 — Hosted Product Blueprint
+
+- Draft the deployment blueprint for the full material-intelligence platform.
+- Separate static marketing, SaaS frontend, backend API, database, storage, workers, and billing.
+- Keep secrets and production infrastructure out of the public repo.
 
 ## Launch Channels
 

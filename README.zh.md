@@ -152,6 +152,8 @@ npm run video:render
 
 演示视频：[assets/remotion/codex-shared-mcp-demo.mp4](assets/remotion/codex-shared-mcp-demo.mp4)
 
+静态发布页源码：[site/index.html](site/index.html)。
+
 已配置机器上的预检：
 
 ```powershell
@@ -206,6 +208,8 @@ audit-ok
 - [docs/release-asset-pack.zh.md](docs/release-asset-pack.zh.md)
 - [docs/design-flow-v0.06.zh.md](docs/design-flow-v0.06.zh.md)
 - [docs/remotion-demo.zh.md](docs/remotion-demo.zh.md)
+- [docs/deployment-commercial-chain.zh.md](docs/deployment-commercial-chain.zh.md)
+- [docs/material-library.zh.md](docs/material-library.zh.md)
 - [docs/current-source-check.zh.md](docs/current-source-check.zh.md)
 - [docs/demo-benchmark-plan.zh.md](docs/demo-benchmark-plan.zh.md)
 

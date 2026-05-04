@@ -38,6 +38,12 @@ npm install
 npm run video:render
 ```
 
+Static landing page:
+
+```text
+site/index.html
+```
+
 ![Architecture](assets/svg/architecture.en.svg)
 
 ## Quick Start
@@ -72,6 +78,10 @@ See:
 - [设计流程 0.06](docs/design-flow-v0.06.zh.md)
 - [Remotion demo](docs/remotion-demo.en.md)
 - [Remotion 演示视频](docs/remotion-demo.zh.md)
+- [Deployment and commercial chain](docs/deployment-commercial-chain.en.md)
+- [部署和商业链条](docs/deployment-commercial-chain.zh.md)
+- [Material library](docs/material-library.en.md)
+- [素材库](docs/material-library.zh.md)
 - [Current source check](docs/current-source-check.en.md)
 - [当前来源核对](docs/current-source-check.zh.md)
 - [Cross-client runtime notes](docs/cross-client-runtime-notes.en.md)

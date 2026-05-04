@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.0 - 2026-05-04
+
+- Added a static GitHub Pages landing page.
+- Added GitHub Pages deployment workflow.
+- Added deployment and commercial-chain documentation.
+- Added a legal, license-aware brand material library index.
+- Added bilingual material-library documentation.
+
 ## 0.7.0 - 2026-05-04
 
 - Added a Remotion animation project.

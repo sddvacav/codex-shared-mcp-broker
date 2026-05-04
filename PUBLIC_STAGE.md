@@ -11,6 +11,7 @@ For public launch storytelling, the project also uses a simpler stage label:
 | `0.5.0` | `0.05` | Privacy guard extraction stage |
 | `0.6.0` | `0.06` | Short demo and release asset pack stage |
 | `0.7.0` | `0.07` | Remotion rendered demo video stage |
+| `0.8.0` | `0.08` | Static landing page and material library stage |
 
 The reason for keeping both:
 

@@ -152,6 +152,8 @@ npm run video:render
 
 Demo video: [assets/remotion/codex-shared-mcp-demo.mp4](assets/remotion/codex-shared-mcp-demo.mp4)
 
+Static landing page source: [site/index.html](site/index.html).
+
 On a configured machine, run:
 
 ```powershell
@@ -206,6 +208,8 @@ Additional launch assets:
 - [docs/release-asset-pack.en.md](docs/release-asset-pack.en.md)
 - [docs/design-flow-v0.06.en.md](docs/design-flow-v0.06.en.md)
 - [docs/remotion-demo.en.md](docs/remotion-demo.en.md)
+- [docs/deployment-commercial-chain.en.md](docs/deployment-commercial-chain.en.md)
+- [docs/material-library.en.md](docs/material-library.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
 - [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 

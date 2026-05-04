@@ -1,0 +1,98 @@
+{
+  "version": "0.08",
+  "policy": {
+    "mode": "official-links-and-license-aware-references",
+    "rule": "Do not copy proprietary logos, videos, UI kits, or campaign assets into this repository unless the license explicitly permits redistribution.",
+    "use": "Use this file as an index for study, design inspiration, and compliance-aware references."
+  },
+  "sources_checked_on": "2026-05-04",
+  "companies": [
+    {
+      "name": "Apple",
+      "category": "design-system",
+      "official_resources": [
+        "https://developer.apple.com/design/",
+        "https://developer.apple.com/design/resources/",
+        "https://developer.apple.com/design/human-interface-guidelines"
+      ],
+      "usable_for": ["interface principles", "platform conventions", "accessibility patterns"],
+      "do_not": ["redistribute Apple templates or brand assets without checking license and usage rules"]
+    },
+    {
+      "name": "Google Material Design",
+      "category": "design-system",
+      "official_resources": [
+        "https://design.google/resources/",
+        "https://m3.material.io/"
+      ],
+      "usable_for": ["layout principles", "color and typography systems", "component behavior patterns"],
+      "do_not": ["treat Google trademarks or product icons as reusable brand assets"]
+    },
+    {
+      "name": "Google Brand Resource Center",
+      "category": "brand-guidelines",
+      "official_resources": [
+        "https://about.google/brand-resource-center/brand-elements/"
+      ],
+      "usable_for": ["understanding Google trademark boundaries"],
+      "do_not": ["use Google logos without permission or partnership approval"]
+    },
+    {
+      "name": "Microsoft",
+      "category": "brand-guidelines",
+      "official_resources": [
+        "https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks"
+      ],
+      "usable_for": ["brand usage boundaries", "trademark compliance"],
+      "do_not": ["copy Microsoft logos, icons, or product marks into project assets without following the trademark rules"]
+    },
+    {
+      "name": "Microsoft Fluent",
+      "category": "design-system",
+      "official_resources": [
+        "https://fluent2.microsoft.design/",
+        "https://react.fluentui.dev/"
+      ],
+      "usable_for": ["enterprise UI patterns", "accessibility-focused components", "interaction principles"],
+      "do_not": ["claim the project is Fluent unless actually implemented with Fluent components"]
+    },
+    {
+      "name": "YouTube",
+      "category": "brand-guidelines",
+      "official_resources": [
+        "https://www.brand.youtube/",
+        "https://developers.google.com/youtube/terms/branding-guidelines"
+      ],
+      "usable_for": ["video platform brand usage rules", "embedding and API branding constraints"],
+      "do_not": ["use YouTube marks in promotional materials outside the published guidelines"]
+    },
+    {
+      "name": "OpenAI",
+      "category": "brand-guidelines",
+      "official_resources": [
+        "https://openai.com/brand/"
+      ],
+      "usable_for": ["OpenAI and ChatGPT trademark usage boundaries", "brand tone references"],
+      "do_not": ["use OpenAI marks as if this project is endorsed by OpenAI"]
+    },
+    {
+      "name": "Anthropic",
+      "category": "company-reference",
+      "official_resources": [
+        "https://www.anthropic.com/company",
+        "https://www.anthropic.com/news"
+      ],
+      "usable_for": ["company positioning reference", "responsible AI messaging study"],
+      "do_not": ["download or reuse unofficial Anthropic logo packs as project assets"]
+    },
+    {
+      "name": "Gemini",
+      "category": "brand-guidelines",
+      "official_resources": [
+        "https://support.gemini.com/hc/en-us/articles/210017573-Brand-material-usage"
+      ],
+      "usable_for": ["brand material usage boundary study"],
+      "do_not": ["assume this applies to Google Gemini AI branding without checking the exact source"]
+    }
+  ]
+}

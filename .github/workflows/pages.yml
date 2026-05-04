@@ -1,0 +1,40 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare static site
+        shell: bash
+        run: |
+          mkdir -p _site/assets
+          cp -R site/* _site/
+          cp assets/svg/logo.svg _site/assets/logo.svg
+          cp assets/svg/benchmark.en.svg _site/assets/benchmark.en.svg
+          cp assets/image2/product-overview.png _site/assets/product-overview.png
+          cp assets/remotion/codex-shared-mcp-demo.mp4 _site/assets/codex-shared-mcp-demo.mp4
+          cp assets/remotion/codex-shared-mcp-demo-poster.png _site/assets/codex-shared-mcp-demo-poster.png
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

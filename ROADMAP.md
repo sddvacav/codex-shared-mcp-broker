@@ -55,9 +55,18 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 
 ## v0.8.0 - Distribution Page
 
-- Build a small static landing page for the release assets.
-- Embed the Remotion video and benchmark image.
-- Keep the page static and privacy-safe.
+- Status: delivered.
+- Built a static landing page for GitHub Pages.
+- Embedded the Remotion video and benchmark image.
+- Added deployment and commercial-chain documentation.
+- Added a legal material library index.
+- Kept the page static and privacy-safe.
+
+## v0.9.0 - Hosted Product Blueprint
+
+- Draft the deployment blueprint for the full material-intelligence platform.
+- Separate static marketing, SaaS frontend, backend API, database, object storage, workers, and billing.
+- Keep secrets and production infrastructure out of the public repo.
 
 ## Non-Goals
 
