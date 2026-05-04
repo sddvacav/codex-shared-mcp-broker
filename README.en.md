@@ -131,6 +131,10 @@ Default result: direct stdio has 80 synthetic process units, shared broker has 9
 
 ![Synthetic benchmark](assets/svg/benchmark.en.svg)
 
+Demo storyboard:
+
+![Demo storyboard](assets/svg/demo-storyboard.en.svg)
+
 Run the agent runtime privacy guard:
 
 ```powershell
@@ -189,6 +193,9 @@ Additional launch assets:
 - [docs/agent-runtime-privacy-guard.en.md](docs/agent-runtime-privacy-guard.en.md)
 - [docs/benchmark.en.md](docs/benchmark.en.md)
 - [docs/cross-client-runtime-notes.en.md](docs/cross-client-runtime-notes.en.md)
+- [docs/demo-script.en.md](docs/demo-script.en.md)
+- [docs/release-asset-pack.en.md](docs/release-asset-pack.en.md)
+- [docs/design-flow-v0.06.en.md](docs/design-flow-v0.06.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
 - [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 

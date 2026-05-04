@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.0 - 2026-05-04
+
+- Added a short demo script and storyboard SVGs.
+- Added bilingual release asset packs for GitHub, X/Twitter, Hacker News, Reddit, Linux.do, and V2EX.
+- Added a stage 0.06 design-flow document covering local capability choices and privacy-safe launch constraints.
+- Updated README, roadmap, stage numbering, and repository audit coverage for the launch package.
+
 ## 0.5.0 - 2026-05-04
 
 - Added reusable Agent Runtime Privacy Guard scanning module.

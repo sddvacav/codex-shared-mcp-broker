@@ -37,9 +37,17 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 - Detects credentials, private machine paths, local gateway references, generated session traces, and accidental config dumps.
 - Added a CI template for release-safe public repositories.
 
-## v0.6.0 - Demo Video
+## v0.6.0 - Demo and Release Asset Pack
 
-- Add a short demo plan and reproducible benchmark method.
+- Status: delivered.
+- Added a 60-90 second short demo script.
+- Added release copy for GitHub, X/Twitter, Hacker News, Reddit, Linux.do, and V2EX.
+- Added demo storyboard SVGs.
+- Documented the design flow and local capability map.
+
+## v0.7.0 - Demo Video
+
+- Record or assemble the short demo from the script.
 - Compare process ownership patterns before and after the shared broker pattern.
 - Keep all benchmark data synthetic and privacy-safe.
 

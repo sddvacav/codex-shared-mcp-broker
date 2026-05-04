@@ -9,6 +9,7 @@ For public launch storytelling, the project also uses a simpler stage label:
 | `0.3.0` | `0.03` | First shareable benchmark stage |
 | `0.4.0` | `0.04` | Cross-client runtime notes stage |
 | `0.5.0` | `0.05` | Privacy guard extraction stage |
+| `0.6.0` | `0.06` | Short demo and release asset pack stage |
 
 The reason for keeping both:
 

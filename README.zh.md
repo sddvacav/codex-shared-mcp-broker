@@ -131,6 +131,10 @@ codex-shared-mcp-benchmark --windows 10 --servers 8 --output benchmark.md
 
 ![合成 benchmark](assets/svg/benchmark.zh.svg)
 
+演示分镜：
+
+![演示分镜](assets/svg/demo-storyboard.zh.svg)
+
 运行 agent runtime privacy guard：
 
 ```powershell
@@ -189,6 +193,9 @@ audit-ok
 - [docs/agent-runtime-privacy-guard.zh.md](docs/agent-runtime-privacy-guard.zh.md)
 - [docs/benchmark.zh.md](docs/benchmark.zh.md)
 - [docs/cross-client-runtime-notes.zh.md](docs/cross-client-runtime-notes.zh.md)
+- [docs/demo-script.zh.md](docs/demo-script.zh.md)
+- [docs/release-asset-pack.zh.md](docs/release-asset-pack.zh.md)
+- [docs/design-flow-v0.06.zh.md](docs/design-flow-v0.06.zh.md)
 - [docs/current-source-check.zh.md](docs/current-source-check.zh.md)
 - [docs/demo-benchmark-plan.zh.md](docs/demo-benchmark-plan.zh.md)
 

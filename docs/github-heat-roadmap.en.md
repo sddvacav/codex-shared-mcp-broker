@@ -57,9 +57,16 @@ The sharper positioning is:
 - Detects private machine paths, credentials, local gateway references, and generated session traces.
 - Provides a CI template for public repository release safety.
 
-### v0.6.0 — Demo Video
+### v0.6.0 — Demo and Release Asset Pack
 
-- Add a short visual demo plan.
+- Status: delivered.
+- Added a short visual demo script.
+- Added release copy blocks for GitHub, X/Twitter, Hacker News, Reddit, Linux.do, and V2EX.
+- Added demo storyboard SVGs and design-flow documentation.
+
+### v0.7.0 — Demo Video
+
+- Record or assemble the short demo from the script.
 - Show the synthetic benchmark: N windows x M tool servers before/after process ownership.
 - Keep it synthetic and privacy-safe.
 
