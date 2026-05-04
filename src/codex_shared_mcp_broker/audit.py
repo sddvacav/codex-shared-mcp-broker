@@ -9,12 +9,13 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 import tomllib
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
+
+from .privacy_guard import PrivacyFinding, scan_privacy
 
 
 REQUIRED_FILES = [
@@ -26,6 +27,8 @@ REQUIRED_FILES = [
     "LICENSE",
     "SECURITY.md",
     "CONTRIBUTING.md",
+    "docs/agent-runtime-privacy-guard.en.md",
+    "docs/agent-runtime-privacy-guard.zh.md",
     "docs/architecture.en.md",
     "docs/architecture.zh.md",
     "docs/benchmark.en.md",
@@ -46,9 +49,11 @@ REQUIRED_FILES = [
     "docs/launch-post.zh.md",
     "examples/codex-config.toml",
     "examples/named_servers.example.json",
+    "examples/privacy-guard-ci.yml",
     "scripts/preflight.ps1",
     "src/codex_shared_mcp_broker/benchmark.py",
     "src/codex_shared_mcp_broker/diagnostics.py",
+    "src/codex_shared_mcp_broker/privacy_guard.py",
     "assets/svg/architecture.en.svg",
     "assets/svg/architecture.zh.svg",
     "assets/svg/benchmark.en.svg",
@@ -74,28 +79,6 @@ TEXT_FILE_SUFFIXES = {
     ".yaml",
     ".txt",
 }
-
-SECRET_PATTERNS = [
-    re.compile(r"sk-[A-Za-z0-9_\-]{20,}"),
-    re.compile(r"gh[opusr]_[A-Za-z0-9_]{20,}"),
-    re.compile(r"(?i)(api[_-]?key|auth[_-]?token|bearer[_-]?token)\s*=\s*['\"][^'\"]{8,}['\"]"),
-    re.compile(r"(?i)password\s*=\s*['\"][^'\"]{6,}['\"]"),
-]
-
-PRIVACY_PATTERNS = [
-    re.compile(r"(?i)\bsub2api\b"),
-    re.compile(r"(?i)\.codex_home"),
-    re.compile(r"(?i)\bLAPTOP-[A-Z0-9\-]+"),
-    re.compile(r"(?i)C:\\Users\\[^\\\s]+"),
-    re.compile(r"(?i)D:\\(?!path\\to\\your\\b)[^ \n\r\t\"')]+"),
-]
-
-PRIVACY_ALLOWLIST = {
-    "scripts/check-no-secrets.ps1",
-    "src/codex_shared_mcp_broker/audit.py",
-    "src/codex_shared_mcp_broker/diagnostics.py",
-}
-
 
 @dataclass(frozen=True)
 class Finding:
@@ -153,34 +136,19 @@ def audit_examples(root: Path) -> list[Finding]:
     return findings
 
 
-def audit_no_secrets(root: Path) -> list[Finding]:
-    findings: list[Finding] = []
-    for path in _text_files(root):
-        text = path.read_text(encoding="utf-8", errors="ignore")
-        rel = str(path.relative_to(root)).replace("\\", "/")
-        for pattern in SECRET_PATTERNS:
-            if pattern.search(text):
-                findings.append(Finding("error", rel, "possible secret pattern found"))
-    return findings
+def _privacy_to_finding(finding: PrivacyFinding) -> Finding:
+    return Finding("error", finding.path, f"{finding.rule_id}: {finding.message}")
 
 
-def audit_no_private_machine_details(root: Path) -> list[Finding]:
-    findings: list[Finding] = []
-    for path in _text_files(root):
-        rel = str(path.relative_to(root)).replace("\\", "/")
-        if rel in PRIVACY_ALLOWLIST:
-            continue
-        text = path.read_text(encoding="utf-8", errors="ignore")
-        for pattern in PRIVACY_PATTERNS:
-            if pattern.search(text):
-                findings.append(Finding("error", rel, "possible private machine detail found"))
-    return findings
+def audit_privacy_guard(root: Path) -> list[Finding]:
+    return [_privacy_to_finding(finding) for finding in scan_privacy(root)]
 
 
 def audit_bilingual_docs(root: Path) -> list[Finding]:
     findings: list[Finding] = []
     pairs = [
         ("README.en.md", "README.zh.md"),
+        ("docs/agent-runtime-privacy-guard.en.md", "docs/agent-runtime-privacy-guard.zh.md"),
         ("docs/architecture.en.md", "docs/architecture.zh.md"),
         ("docs/benchmark.en.md", "docs/benchmark.zh.md"),
         ("docs/github-landscape.en.md", "docs/github-landscape.zh.md"),
@@ -202,8 +170,7 @@ def run_audit(root: Path) -> list[Finding]:
     return [
         *audit_required_files(root),
         *audit_examples(root),
-        *audit_no_secrets(root),
-        *audit_no_private_machine_details(root),
+        *audit_privacy_guard(root),
         *audit_bilingual_docs(root),
     ]
 

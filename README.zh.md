@@ -131,6 +131,14 @@ codex-shared-mcp-benchmark --windows 10 --servers 8 --output benchmark.md
 
 ![合成 benchmark](assets/svg/benchmark.zh.svg)
 
+运行 agent runtime privacy guard：
+
+```powershell
+agent-runtime-privacy-guard .
+```
+
+它会检查公开发布产物中的常见密钥形态和本地 agent runtime 隐私细节，但不会打印匹配到的密钥值。
+
 已配置机器上的预检：
 
 ```powershell
@@ -178,6 +186,7 @@ audit-ok
 
 - [ROADMAP.md](ROADMAP.md)
 - [PUBLIC_STAGE.md](PUBLIC_STAGE.md)
+- [docs/agent-runtime-privacy-guard.zh.md](docs/agent-runtime-privacy-guard.zh.md)
 - [docs/benchmark.zh.md](docs/benchmark.zh.md)
 - [docs/cross-client-runtime-notes.zh.md](docs/cross-client-runtime-notes.zh.md)
 - [docs/current-source-check.zh.md](docs/current-source-check.zh.md)

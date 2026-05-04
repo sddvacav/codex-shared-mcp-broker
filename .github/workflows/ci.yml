@@ -21,3 +21,5 @@ jobs:
         run: python -m pytest
       - name: Audit public artifacts
         run: codex-shared-mcp-audit .
+      - name: Agent runtime privacy guard
+        run: agent-runtime-privacy-guard .

@@ -25,6 +25,12 @@ Synthetic benchmark:
 codex-shared-mcp-benchmark --windows 10 --servers 8 --output benchmark.md
 ```
 
+Agent runtime privacy guard:
+
+```powershell
+agent-runtime-privacy-guard .
+```
+
 ![Architecture](assets/svg/architecture.en.svg)
 
 ## Quick Start
@@ -49,6 +55,8 @@ See:
 - [设计流程](docs/design-process.zh.md)
 - [Roadmap](ROADMAP.md)
 - [Public stage numbering](PUBLIC_STAGE.md)
+- [Agent Runtime Privacy Guard](docs/agent-runtime-privacy-guard.en.md)
+- [Agent Runtime Privacy Guard 中文说明](docs/agent-runtime-privacy-guard.zh.md)
 - [Current source check](docs/current-source-check.en.md)
 - [当前来源核对](docs/current-source-check.zh.md)
 - [Cross-client runtime notes](docs/cross-client-runtime-notes.en.md)

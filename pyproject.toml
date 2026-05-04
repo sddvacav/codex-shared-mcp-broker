@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "codex-shared-mcp-broker"
-version = "0.4.0"
+version = "0.5.0"
 description = "Windows-oriented Codex Desktop shared MCP broker configuration, documentation, and validation toolkit."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -39,6 +39,8 @@ test = ["pytest>=8.0"]
 codex-shared-mcp-audit = "codex_shared_mcp_broker.audit:main"
 codex-shared-mcp-diagnose = "codex_shared_mcp_broker.diagnostics:main"
 codex-shared-mcp-benchmark = "codex_shared_mcp_broker.benchmark:main"
+codex-shared-mcp-privacy-guard = "codex_shared_mcp_broker.privacy_guard:main"
+agent-runtime-privacy-guard = "codex_shared_mcp_broker.privacy_guard:main"
 
 [project.urls]
 Homepage = "https://github.com/sddvacav/codex-shared-mcp-broker"

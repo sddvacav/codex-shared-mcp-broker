@@ -1,6 +1,6 @@
 # 当前来源核对
 
-核对日期：2026-05-03
+核对日期：2026-05-04
 
 这个项目处在变化很快的方向，所以公开定位必须和当前上游文档、相关项目保持一致。
 
@@ -13,6 +13,9 @@
 - OpenAI Codex 配置文档：<https://github.com/openai/codex/blob/main/docs/config.md>
 - IBM ContextForge MCP gateway：<https://github.com/IBM/mcp-context-forge>
 - Microsoft MCP Gateway：<https://github.com/microsoft/mcp-gateway>
+- GitHub Secret Scanning detection scope：<https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-detection-scope>
+- GitHub Secret Protection：<https://github.com/security/advanced-security/secret-protection>
+- OWASP Secrets Management Cheat Sheet：<https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html>
 - 最近关于 Codex/MCP 配置可见性和 Windows 配置摩擦的社区信号：
   - <https://www.reddit.com/r/codex/comments/1srxc56/mcp_server_shows_up_in_codex_cli_but_doesnt_show/>
   - <https://www.reddit.com/r/codex/comments/1rlked7/codex_windows_app_wrong_configtoml/>
@@ -25,6 +28,7 @@
 - 不应把本项目定位成通用企业级 MCP gateway。
 - 更强的定位是 Windows/Codex Desktop 的实战 runtime 案例：多窗口本地 MCP 进程放大、共享本机 HTTP broker、可验证的安全发布。
 - 社区帖子只能作为操作提示，不作为权威来源。它们说明公开文档里需要写清楚配置来源核对和 Windows 说明。
+- Privacy guard 应该补充平台级 secret scanning。它的差异点是本地 agent runtime 隐私：私有路径、runtime home 引用、本地网关名称、生成痕迹和高风险发布产物。
 
 ## 公开表述边界
 

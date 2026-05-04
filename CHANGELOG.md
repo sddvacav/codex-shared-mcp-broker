@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.5.0 - 2026-05-04
+
+- Added reusable Agent Runtime Privacy Guard scanning module.
+- Added `agent-runtime-privacy-guard` and `codex-shared-mcp-privacy-guard` commands.
+- Refactored repository audit privacy checks to use the new guard.
+- Added bilingual privacy guard documentation and a GitHub Actions example.
+- Added tests for secret detection, private runtime path detection, allowlisting, and safe report output.
+
 ## 0.4.0 - 2026-05-04
 
 - Added cross-client MCP runtime notes.

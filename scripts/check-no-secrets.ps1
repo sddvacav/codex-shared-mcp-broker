@@ -25,6 +25,7 @@ foreach ($file in $files) {
     if (
         $relative -eq ".\src\codex_shared_mcp_broker\audit.py" -or
         $relative -eq ".\src\codex_shared_mcp_broker\diagnostics.py" -or
+        $relative -eq ".\src\codex_shared_mcp_broker\privacy_guard.py" -or
         $relative -eq ".\scripts\check-no-secrets.ps1"
     ) {
         continue

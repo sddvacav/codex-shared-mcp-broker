@@ -31,9 +31,11 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 
 ## v0.5.0 - Agent Runtime Privacy Guard
 
-- Extract reusable privacy checks into a dedicated module.
-- Detect credentials, private machine paths, local gateway references, generated session traces, and accidental config dumps.
-- Provide CI templates for release-safe public repositories.
+- Status: delivered.
+- Extracted reusable privacy checks into a dedicated module.
+- Added standalone privacy guard commands.
+- Detects credentials, private machine paths, local gateway references, generated session traces, and accidental config dumps.
+- Added a CI template for release-safe public repositories.
 
 ## v0.6.0 - Demo Video
 

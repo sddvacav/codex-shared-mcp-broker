@@ -1,6 +1,6 @@
 # Current Source Check
 
-Checked on: 2026-05-03
+Checked on: 2026-05-04
 
 This project sits in a fast-moving area, so the public positioning should stay tied to current upstream behavior and related projects.
 
@@ -13,6 +13,9 @@ This project sits in a fast-moving area, so the public positioning should stay t
 - OpenAI Codex configuration documentation: <https://github.com/openai/codex/blob/main/docs/config.md>
 - IBM ContextForge MCP gateway: <https://github.com/IBM/mcp-context-forge>
 - Microsoft MCP Gateway: <https://github.com/microsoft/mcp-gateway>
+- GitHub Secret Scanning detection scope: <https://docs.github.com/en/code-security/reference/secret-security/secret-scanning-detection-scope>
+- GitHub Secret Protection: <https://github.com/security/advanced-security/secret-protection>
+- OWASP Secrets Management Cheat Sheet: <https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html>
 - Recent community signals on Codex/MCP configuration visibility and Windows setup friction:
   - <https://www.reddit.com/r/codex/comments/1srxc56/mcp_server_shows_up_in_codex_cli_but_doesnt_show/>
   - <https://www.reddit.com/r/codex/comments/1rlked7/codex_windows_app_wrong_configtoml/>
@@ -25,6 +28,7 @@ This project sits in a fast-moving area, so the public positioning should stay t
 - This repository should not position itself as a general-purpose enterprise gateway.
 - The stronger angle is the practical Windows/Codex Desktop runtime case study: multi-window local MCP process fan-out, shared local HTTP broker, and release-safe validation.
 - Community posts are useful operational hints, not authority. They support the need for explicit config-source checks and clear Windows instructions.
+- The privacy guard should complement platform secret scanning. Its differentiator is local agent runtime privacy: private paths, runtime home references, local gateway names, generated traces, and risky release artifacts.
 
 ## Public Claim Boundary
 

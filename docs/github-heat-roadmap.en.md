@@ -52,9 +52,10 @@ The sharper positioning is:
 
 ### v0.5.0 — Agent Runtime Privacy Guard
 
-- Extract reusable privacy checks into a dedicated module.
-- Detect private machine paths, credentials, local gateway references, and generated session traces.
-- Provide CI templates for public repository release safety.
+- Status: delivered.
+- Extracted reusable privacy checks into a dedicated module.
+- Detects private machine paths, credentials, local gateway references, and generated session traces.
+- Provides a CI template for public repository release safety.
 
 ### v0.6.0 — Demo Video
 

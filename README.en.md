@@ -131,6 +131,14 @@ Default result: direct stdio has 80 synthetic process units, shared broker has 9
 
 ![Synthetic benchmark](assets/svg/benchmark.en.svg)
 
+Run the agent runtime privacy guard:
+
+```powershell
+agent-runtime-privacy-guard .
+```
+
+It checks public-release artifacts for common secret shapes and private local agent runtime details without printing matched secret values.
+
 On a configured machine, run:
 
 ```powershell
@@ -178,6 +186,7 @@ Additional launch assets:
 
 - [ROADMAP.md](ROADMAP.md)
 - [PUBLIC_STAGE.md](PUBLIC_STAGE.md)
+- [docs/agent-runtime-privacy-guard.en.md](docs/agent-runtime-privacy-guard.en.md)
 - [docs/benchmark.en.md](docs/benchmark.en.md)
 - [docs/cross-client-runtime-notes.en.md](docs/cross-client-runtime-notes.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
