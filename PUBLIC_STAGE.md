@@ -13,6 +13,7 @@ For public launch storytelling, the project also uses a simpler stage label:
 | `0.7.0` | `0.07` | Remotion rendered demo video stage |
 | `0.8.0` | `0.08` | Static landing page and material library stage |
 | `0.9.0` | `0.09` | Hosted product blueprint stage |
+| `0.10.0` | `0.10` | High-concurrency broker sharding stage |
 
 The reason for keeping both:
 

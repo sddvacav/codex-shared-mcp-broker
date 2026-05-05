@@ -69,7 +69,15 @@ The goal is to make that failure mode visible, measurable, and fixable without r
 - Separated static marketing, SaaS frontend, backend API, database, object storage, workers, billing, observability, compliance, and region services.
 - Added public/private security boundaries.
 
-## v0.10.0 - Product Conversion Funnel
+## v0.10.0 - High-Concurrency Broker Sharding
+
+- Status: delivered.
+- Added broker sharding for high-concurrency local runtime pressure.
+- Added `codex-shared-mcp-shards` for planning and applying Codex home to broker-port assignments.
+- Extended diagnostics with multi-port broker pressure reporting.
+- Kept every MCP server available; sharding changes only local broker URL ports.
+
+## v0.11.0 - Product Conversion Funnel
 
 - Add waitlist, contact, consulting, and enterprise conversion copy.
 - Keep the implementation static unless a real backend is selected.

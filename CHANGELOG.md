@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.0 - 2026-05-05
+
+- Added `codex-shared-mcp-shards` to plan and apply broker-port assignments across Codex homes.
+- Extended diagnostics with multi-port broker pressure reporting.
+- Added bilingual broker sharding documentation for 30-window style workloads.
+- Kept the MCP server set intact; sharding changes only local broker URL ports.
+
 ## 0.9.0 - 2026-05-04
 
 - Added hosted material-intelligence product blueprint documentation.

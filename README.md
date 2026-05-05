@@ -19,6 +19,12 @@ Runtime diagnostics:
 codex-shared-mcp-diagnose --output codex-runtime-report.md
 ```
 
+High-concurrency broker sharding:
+
+```powershell
+codex-shared-mcp-shards --config D:/codex_cli_launcher/homes/slot1 --config D:/codex_cli_launcher/homes/slot3 --ports 38808,38809 --from-ports 38808
+```
+
 Synthetic benchmark:
 
 ```powershell
@@ -83,6 +89,8 @@ See:
 - [Material library](docs/material-library.en.md)
 - [素材库](docs/material-library.zh.md)
 - [Hosted product blueprint](docs/hosted-product-blueprint.en.md)
+- [Broker sharding](docs/sharding.en.md)
+- [Broker 分片](docs/sharding.zh.md)
 - [托管产品蓝图](docs/hosted-product-blueprint.zh.md)
 - [Current source check](docs/current-source-check.en.md)
 - [当前来源核对](docs/current-source-check.zh.md)

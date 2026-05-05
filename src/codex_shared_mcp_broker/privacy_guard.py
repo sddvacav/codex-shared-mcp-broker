@@ -34,6 +34,7 @@ DEFAULT_ALLOWLIST = {
     "src/codex_shared_mcp_broker/audit.py",
     "src/codex_shared_mcp_broker/diagnostics.py",
     "src/codex_shared_mcp_broker/privacy_guard.py",
+    "src/codex_shared_mcp_broker/shards.py",
 }
 
 RISKY_FILE_NAMES = {

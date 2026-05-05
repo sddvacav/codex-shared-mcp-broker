@@ -53,6 +53,15 @@ class TransportSummary:
 
 
 @dataclass(frozen=True)
+class BrokerPortSummary:
+    port: int
+    listening: bool
+    http_reachable: bool
+    http_status: str
+    connection_count: int | None
+
+
+@dataclass(frozen=True)
 class CheckResult:
     name: str
     status: str
@@ -71,6 +80,7 @@ class DiagnosticReport:
     broker_listening: bool
     broker_http_reachable: bool
     broker_http_status: str
+    broker_ports: list[BrokerPortSummary]
     overall_status: str
     checks: list[CheckResult]
     recommendations: list[str]
@@ -197,6 +207,71 @@ def _probe_broker_listen(port: int, timeout: float = 1.0) -> bool:
         return False
 
 
+def _collect_port_connection_counts(ports: list[int]) -> dict[int, int]:
+    if not ports:
+        return {}
+    powershell = shutil.which("powershell") or shutil.which("pwsh")
+    if powershell is None:
+        return {}
+    quoted_ports = ",".join(str(port) for port in ports)
+    script = (
+        f"$ports = @({quoted_ports}); "
+        "Get-NetTCPConnection -LocalPort $ports -ErrorAction SilentlyContinue | "
+        "Group-Object LocalPort | "
+        "ForEach-Object { [PSCustomObject]@{ Port = [int]$_.Name; Count = $_.Count } } | "
+        "ConvertTo-Json -Compress"
+    )
+    try:
+        completed = subprocess.run(
+            [powershell, "-NoProfile", "-Command", script],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            timeout=5,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired):  # pragma: no cover - depends on local runtime
+        return {}
+    if completed.returncode != 0 or not completed.stdout.strip():
+        return {}
+    try:
+        payload = json.loads(completed.stdout)
+    except json.JSONDecodeError:
+        return {}
+    if isinstance(payload, dict):
+        payload = [payload]
+    if not isinstance(payload, list):
+        return {}
+    counts: dict[int, int] = {}
+    for item in payload:
+        if not isinstance(item, dict):
+            continue
+        try:
+            counts[int(item["Port"])] = int(item["Count"])
+        except (KeyError, TypeError, ValueError):
+            continue
+    return counts
+
+
+def _probe_broker_ports(ports: list[int]) -> list[BrokerPortSummary]:
+    connection_counts = _collect_port_connection_counts(ports)
+    summaries: list[BrokerPortSummary] = []
+    for port in ports:
+        listening = _probe_broker_listen(port)
+        http_reachable, http_status = _probe_broker_http(port) if listening else (False, "not-listening")
+        summaries.append(
+            BrokerPortSummary(
+                port=port,
+                listening=listening,
+                http_reachable=http_reachable,
+                http_status=http_status,
+                connection_count=connection_counts.get(port),
+            )
+        )
+    return summaries
+
+
 def _run_codex_mcp_list(timeout: float = 10.0) -> tuple[bool, str, str]:
     codex = shutil.which("codex")
     if not codex:
@@ -244,6 +319,7 @@ def _build_checks(
     broker_listening: bool,
     broker_http_reachable: bool,
     broker_http_status: str,
+    broker_ports: list[BrokerPortSummary],
 ) -> tuple[list[CheckResult], str, list[str]]:
     checks: list[CheckResult] = []
 
@@ -303,6 +379,19 @@ def _build_checks(
             broker_http_status,
         )
     )
+    if broker_ports:
+        listening_ports = sum(1 for item in broker_ports if item.listening)
+        max_connections = max(
+            (item.connection_count for item in broker_ports if item.connection_count is not None),
+            default=None,
+        )
+        checks.append(
+            CheckResult(
+                "Broker shard ports",
+                "green" if listening_ports == len(broker_ports) else ("yellow" if listening_ports else "red"),
+                f"listening={listening_ports}/{len(broker_ports)}, max_connections={_safe_value(max_connections)}",
+            )
+        )
     checks.append(
         CheckResult(
             "Codex MCP list available",
@@ -341,6 +430,12 @@ def _build_checks(
         recommendations.append("Start the shared broker and verify port 38808 is listening.")
     if config.shared_http_urls == 0:
         recommendations.append("Point Codex MCP entries at shared HTTP URLs before promoting the repo as the working setup.")
+    if broker_ports:
+        live_ports = [item for item in broker_ports if item.listening]
+        if len(live_ports) <= 1:
+            recommendations.append("For 30-window workloads, run multiple broker shard ports and assign Codex homes across them.")
+        elif any((item.connection_count or 0) > 100 for item in live_ports):
+            recommendations.append("One broker shard has high connection pressure; add shards or rebalance Codex homes.")
 
     return checks, overall_status, recommendations
 
@@ -348,6 +443,7 @@ def _build_checks(
 def build_report(
     codex_home: Path | None,
     broker_port: int = BROKER_DEFAULT_PORT,
+    broker_ports: list[int] | None = None,
     codex_mcp_text: str | None = None,
     timeout: float = 10.0,
     codex_config_source: str | None = None,
@@ -378,8 +474,16 @@ def build_report(
         live_output_hint=live_output_hint,
     )
 
-    broker_listening = _probe_broker_listen(broker_port)
-    broker_http_reachable, broker_http_status = _probe_broker_http(broker_port) if broker_listening else (False, "not-listening")
+    ports_to_probe = broker_ports if broker_ports is not None else [broker_port]
+    broker_port_summaries = _probe_broker_ports(ports_to_probe)
+    primary_summary = next((item for item in broker_port_summaries if item.port == broker_port), None)
+    if primary_summary is None:
+        broker_listening = _probe_broker_listen(broker_port)
+        broker_http_reachable, broker_http_status = _probe_broker_http(broker_port) if broker_listening else (False, "not-listening")
+    else:
+        broker_listening = primary_summary.listening
+        broker_http_reachable = primary_summary.http_reachable
+        broker_http_status = primary_summary.http_status
     checks, overall_status, recommendations = _build_checks(
         config,
         transport,
@@ -387,6 +491,7 @@ def build_report(
         broker_listening,
         broker_http_reachable,
         broker_http_status,
+        broker_port_summaries,
     )
 
     generated_at = datetime.now().astimezone().isoformat(timespec="seconds")
@@ -401,6 +506,7 @@ def build_report(
         broker_listening=broker_listening,
         broker_http_reachable=broker_http_reachable,
         broker_http_status=broker_http_status,
+        broker_ports=broker_port_summaries,
         overall_status=overall_status,
         checks=checks,
         recommendations=recommendations,
@@ -459,6 +565,17 @@ def render_markdown(report: DiagnosticReport) -> str:
     lines.append(f"| Broker listening | {_safe_bool_text(report.broker_listening)} |")
     lines.append(f"| Broker HTTP reachable | {_safe_bool_text(report.broker_http_reachable)} |")
     lines.append(f"| Broker HTTP status | {report.broker_http_status} |")
+    if report.broker_ports:
+        lines.append("")
+        lines.append("## Broker Port Pressure")
+        lines.append("")
+        lines.append("| Port | Listening | HTTP reachable | HTTP status | TCP connections |")
+        lines.append("| ---: | --- | --- | --- | ---: |")
+        for item in report.broker_ports:
+            lines.append(
+                f"| {item.port} | {_safe_bool_text(item.listening)} | "
+                f"{_safe_bool_text(item.http_reachable)} | {item.http_status} | {_safe_value(item.connection_count)} |"
+            )
 
     lines.append("")
     lines.append("## Recommendations")
@@ -482,6 +599,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Generate a privacy-safe Codex runtime diagnostic report.")
     parser.add_argument("--codex-home", type=Path, default=None, help="path to the Codex home directory")
     parser.add_argument("--broker-port", type=int, default=BROKER_DEFAULT_PORT, help="shared broker port")
+    parser.add_argument("--broker-ports", default=None, help="comma-separated broker shard ports to probe")
     parser.add_argument("--timeout", type=float, default=10.0, help="timeout in seconds for live Codex queries")
     parser.add_argument("--format", choices=("markdown", "json"), default="markdown", help="output format")
     parser.add_argument("--output", type=Path, default=None, help="optional output file path")
@@ -497,9 +615,14 @@ def main(argv: list[str] | None = None) -> int:
         else:
             config_source = "unset"
 
+    broker_ports = None
+    if args.broker_ports:
+        broker_ports = [int(item.strip()) for item in args.broker_ports.split(",") if item.strip()]
+
     report = build_report(
         codex_home,
         broker_port=args.broker_port,
+        broker_ports=broker_ports,
         timeout=args.timeout,
         codex_config_source=config_source,
     )

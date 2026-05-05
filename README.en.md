@@ -121,6 +121,20 @@ The diagnostic report summarizes:
 
 It does not print private absolute paths, account IDs, tokens, or local routing details.
 
+For heavier 30-window style workloads, inspect multiple broker shard ports:
+
+```powershell
+codex-shared-mcp-diagnose --broker-ports 38808,38809,38810,38811
+```
+
+Generate or apply a broker shard plan without removing any MCP servers:
+
+```powershell
+codex-shared-mcp-shards --config D:/codex_cli_launcher/homes/slot1 --config D:/codex_cli_launcher/homes/slot3 --ports 38808,38809 --from-ports 38808
+```
+
+See [broker sharding](docs/sharding.en.md).
+
 Generate a synthetic fan-out benchmark:
 
 ```powershell
@@ -211,6 +225,7 @@ Additional launch assets:
 - [docs/deployment-commercial-chain.en.md](docs/deployment-commercial-chain.en.md)
 - [docs/material-library.en.md](docs/material-library.en.md)
 - [docs/hosted-product-blueprint.en.md](docs/hosted-product-blueprint.en.md)
+- [docs/sharding.en.md](docs/sharding.en.md)
 - [docs/current-source-check.en.md](docs/current-source-check.en.md)
 - [docs/demo-benchmark-plan.en.md](docs/demo-benchmark-plan.en.md)
 
