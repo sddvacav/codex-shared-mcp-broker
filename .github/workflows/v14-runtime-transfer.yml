@@ -1,0 +1,38 @@
+name: V14 runtime transfer
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build transfer chunks
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_REF: ${{ github.head_ref }}
+          REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euxo pipefail
+          git clone "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git" repo
+          cd repo
+          git checkout "${HEAD_REF}"
+          test ! -f runtime_chunks/READY || exit 0
+          rm -rf runtime_chunks /tmp/duckdbwheel
+          mkdir -p runtime_chunks /tmp/duckdbwheel
+          python3 -m pip download --only-binary=:all: --no-deps --python-version 3.13 --implementation cp --abi cp313 duckdb==1.5.1 -d /tmp/duckdbwheel
+          WHEEL=$(find /tmp/duckdbwheel -name 'duckdb-*.whl' -type f | head -1)
+          sha256sum "$WHEEL" > runtime_chunks/WHEEL_SHA256.txt
+          basename "$WHEEL" > runtime_chunks/WHEEL_FILENAME.txt
+          base64 -w 0 "$WHEEL" | split -b 700000 -d -a 3 - runtime_chunks/part_
+          printf 'duckdb-runtime-transfer-v1\n' > runtime_chunks/READY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add runtime_chunks
+          git commit -m 'ci: materialize temporary DuckDB runtime chunks'
+          git push origin "HEAD:${HEAD_REF}"
