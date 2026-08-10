@@ -1,0 +1,25 @@
+name: V14 runtime transfer
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download official DuckDB CPython 3.13 wheel
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p runtime
+          python3 -m pip download --pre --only-binary=:all: --no-deps --python-version 3.13 --implementation cp --abi cp313 'duckdb>=1.5.5' -d runtime
+          sha256sum runtime/duckdb-*.whl | tee runtime/WHEEL_SHA256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: duckdb-python313-runtime-latest
+          path: runtime
+          compression-level: 0
